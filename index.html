@@ -6,12 +6,12 @@
 <title>Panduan Notasi Mazmur</title>
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
 /* VOICE: tenang, liturgis, jelas dibaca di mimbar
    IDEA: halaman buku nyanyian umat yang ikut bernyanyi bersamamu
    PICTURE: partitur angka itu sendiri, menyala per suku kata saat diputar
-   COLOUR and TYPE: ungu Adven sebagai bidang, kertas putih, aksen merah muda Gaudete; Alegreya + Alegreya Sans
+   COLOUR and TYPE: ungu Adven sebagai bidang, kertas putih, aksen merah muda Gaudete; Manrope + DM Sans
    LAYOUT: pita ungu berisi kontrol, partitur satu kolom, bilah putar menempel di bawah */
 :root{color-scheme:light dark;
 --bg:light-dark(#ffffff,#15111a);--ink:light-dark(#1d1724,#efe9f5);--mute:light-dark(#6c6275,#a89cb5);
@@ -19,30 +19,30 @@
 --rose:light-dark(#c8336b,#f06b9b);--soft:light-dark(#f6f1fa,#1e1726);--on:#fff}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Alegreya Sans",system-ui,sans-serif;overflow-x:clip;padding-bottom:110px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "DM Sans",system-ui,sans-serif;overflow-x:clip;padding-bottom:110px}
 button,select,input,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:3px solid var(--rose);outline-offset:2px}
 .top{background:var(--vio);color:#fff;padding:22px max(4vw,16px) 18px}
-.top h1{font:700 clamp(26px,4vw,40px)/1.08 Alegreya,serif;margin:0 0 4px;text-wrap:balance}
+.top h1{letter-spacing:-.02em;font:800 clamp(26px,4vw,40px)/1.08 Manrope,"DM Sans",sans-serif;margin:0 0 4px;text-wrap:balance}
 .top p{margin:0;color:#e7dcf2;font-size:16px}
-.brand{display:flex;gap:16px;align-items:center}.brand img{width:clamp(56px,9vw,84px);height:auto;flex:none;filter:drop-shadow(0 3px 6px #0005)}
-.songT{font:700 20px Alegreya,serif;color:#fff!important;margin-top:14px!important}.songT:empty{display:none}
+.brand{display:flex;gap:16px;align-items:center}.brand a{display:block;flex:none;border-radius:50%;transition:transform .15s}.brand a:hover{transform:scale(1.06)}.brand img{width:clamp(56px,9vw,84px);height:auto;flex:none;filter:drop-shadow(0 3px 6px #0005)}
+.songT{font:700 20px Manrope,"DM Sans",sans-serif;color:#fff!important;margin-top:14px!important}.songT:empty{display:none}
 body.empty .ctl,body.empty .seq,body.empty .player,body.empty .tabs,body.empty .top .row,body.empty #meta{display:none}
 body.empty{padding-bottom:0}
 .hero{max-width:680px;margin:34px auto;text-align:center}
-.hero h2{font:700 clamp(24px,3.4vw,32px)/1.15 Alegreya,serif;margin:0 0 8px;text-wrap:balance}
+.hero h2{font:700 clamp(24px,3.4vw,32px)/1.15 Manrope,"DM Sans",sans-serif;margin:0 0 8px;text-wrap:balance}
 .hero p{color:var(--mute);margin:0 auto 20px;max-width:56ch}
 .hero .drop{padding:30px 20px}
 .hero .row{justify-content:center}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:14px;margin:26px 0 0;text-align:left}
-.steps div{border-top:3px solid var(--vio2);padding-top:8px;font-size:15px}.steps b{display:block;font:700 17px Alegreya,serif}
+.steps div{border-top:3px solid var(--vio2);padding-top:8px;font-size:15px}.steps b{display:block;font:700 17px Manrope,"DM Sans",sans-serif}
 .hero{text-align:left;max-width:860px}.hero h2,.hero>p{text-align:center}
-.mon{font:700 22px Alegreya,serif;margin:26px 0 10px;color:var(--vio2)}
+.mon{font:700 22px Manrope,"DM Sans",sans-serif;margin:26px 0 10px;color:var(--vio2)}
 .dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
 .dc{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;border:1.5px solid var(--line);background:var(--bg);border-radius:14px;padding:14px 16px;min-height:88px}
 .dc:hover{border-color:var(--vio2);background:var(--soft)}
-.dc b{font:700 19px Alegreya,serif;white-space:nowrap}.dc span{font-size:15px;color:var(--mute);line-height:1.35}
+.dc b{font:700 19px Manrope,"DM Sans",sans-serif;white-space:nowrap}.dc span{font-size:15px;color:var(--mute);line-height:1.35}
 .dc.next{border-color:var(--rose);box-shadow:0 0 0 1px var(--rose)}.dc em{font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--rose);border-radius:999px;padding:1px 9px;margin-bottom:4px}
 .dc[disabled]{opacity:.55;cursor:not-allowed;background:transparent}.dc[disabled] span::after{content:" · belum tersedia"}
 .occ{font-size:16px!important;color:#e7dcf2!important;margin-top:2px!important}
@@ -69,8 +69,12 @@ body.empty .headrow{display:none}
 .ctl .v{font-weight:700;color:#fff}
 .step{display:flex;align-items:center;gap:8px}
 .step button{width:44px;height:44px;border-radius:10px;border:1px solid #ffffff55;background:#ffffff14;color:#fff;font-size:20px}
-.step .kv{flex:1;text-align:center;font:700 20px Alegreya,serif;color:#fff}
-input[type=range]{width:100%;accent-color:var(--rose);height:32px}
+.step .kv{flex:1;text-align:center;font:700 20px Manrope,"DM Sans",sans-serif;color:#fff}
+input[type=range]{width:100%;height:32px;-webkit-appearance:none;appearance:none;background:transparent;--p:50%}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--rose) var(--p),#ffffff40 var(--p))}
+input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--rose) var(--p),#ffffff40 var(--p))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--rose);margin-top:-7px}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--rose)}
 .ctl select{width:100%;min-height:40px;border-radius:10px;border:1px solid #ffffff55;background:#ffffff14;color:#fff;padding:6px 10px}
 .ctl select option{color:#000}
 .chk{display:flex;gap:16px;flex-wrap:wrap;color:#fff;font-size:15px}
@@ -84,15 +88,15 @@ main{padding:8px max(4vw,16px) 30px}
 .meta{color:var(--mute);margin:14px 0 4px;font-size:15px}
 .sec{border-radius:14px;padding:12px 14px 16px;margin:12px 0;border:1px solid var(--line);transition:background .2s}
 .sec.live{background:var(--soft);border-color:var(--vio2)}
-.sec h3{font:700 20px Alegreya,serif;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+.sec h3{font:700 20px Manrope,"DM Sans",sans-serif;margin:0 0 6px;display:flex;align-items:center;gap:10px}
 .sec h3 button{border:0;background:var(--vio2);color:#fff;border-radius:999px;width:36px;height:36px;font-size:14px;flex:none}
-.sec h3 span{font:400 14px "Alegreya Sans";color:var(--mute)}
+.sec h3 span{font:400 14px "DM Sans";color:var(--mute)}
 .ln{display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 2px;margin:10px 0}
 .vn{font-weight:700;color:var(--vio2);width:1.6em;align-self:flex-end;padding-bottom:2px}
 .vl .ln{padding-left:1.6em}.vl .ln.first{padding-left:0}
 .c{display:inline-flex;flex-direction:column;align-items:flex-start;padding:0 5px;border-radius:8px;cursor:pointer}
 .c:hover{background:var(--soft)}
-.n{display:flex;gap:3px;font:500 21px/1 "Alegreya Sans";font-variant-numeric:tabular-nums;padding-top:10px;min-height:38px;align-items:flex-end}
+.n{display:flex;gap:3px;font:500 21px/1 "DM Sans";font-variant-numeric:tabular-nums;padding-top:10px;min-height:38px;align-items:flex-end}
 .n i{font-style:normal;position:relative;display:inline-block;padding:3px 3px 6px;border-radius:5px;min-width:1ch;text-align:center}
 .n i.b1,.n i.b2{border-radius:0;background-image:linear-gradient(currentColor,currentColor);background-size:calc(100% + 3px) 2px;background-repeat:no-repeat;background-position:0 0}
 .n i.b2{background-image:linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);background-size:calc(100% + 3px) 2px,calc(100% + 3px) 2px;background-position:0 0,0 5px;padding-top:8px}
@@ -106,22 +110,25 @@ main{padding:8px max(4vw,16px) 30px}
 .r .l{white-space:normal;max-width:min(100%,640px)}
 .r{flex-shrink:1}
 .l b{font-weight:400;border-radius:4px}
+.chd{display:block;font:700 15px/20px "DM Sans",sans-serif;color:var(--rose);min-height:20px;padding:0 4px;border-radius:5px;white-space:nowrap;margin-bottom:-6px}
+.chi{font:700 13px "DM Sans",sans-serif;color:var(--rose);vertical-align:super;margin-right:2px;padding:0 3px;border-radius:4px}
+#chCtl[hidden]{display:none}
 .bar{width:1.5px;align-self:stretch;background:var(--mute);margin:12px 6px 30px;opacity:.6}
-.mk{font:500 20px "Alegreya Sans";color:var(--mute);align-self:flex-start;padding-top:12px;margin:0 4px}
+.mk{font:500 20px "DM Sans";color:var(--mute);align-self:flex-start;padding-top:12px;margin:0 4px}
 .on{background-color:var(--rose)!important;color:var(--on)!important}
 .sung{color:var(--mute)}
 .player{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--vio);color:#fff;padding:10px max(4vw,16px) calc(10px + env(safe-area-inset-bottom))}
 .player .wrap{display:flex;align-items:center;gap:14px}
 .play{width:58px;height:58px;border-radius:50%;border:0;background:var(--rose);color:#fff;font-size:22px;flex:none}
 .pinfo{flex:1}
-.pinfo b,.pinfo span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pinfo b{font:700 17px Alegreya,serif}
+.pinfo b,.pinfo span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pinfo b{font:700 17px Manrope,"DM Sans",sans-serif}
 .prog{height:5px;background:#ffffff30;border-radius:3px;margin-top:6px;overflow:hidden}
 .prog div{height:100%;width:0;background:#fff}
 .pbtn{border:1px solid #ffffff55;background:#ffffff14;color:#fff;border-radius:10px;padding:8px 12px;min-height:44px;flex:none}
 dialog{border:0;border-radius:16px;padding:0;width:min(720px,94vw);max-height:90vh;background:var(--bg);color:var(--ink)}
 dialog::backdrop{background:#0008}
 .dh{background:var(--vio);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.dh h2{font:700 22px Alegreya,serif;margin:0}
+.dh h2{font:700 22px Manrope,"DM Sans",sans-serif;margin:0}
 .dh button{background:none;border:0;color:#fff;font-size:26px;width:44px;height:44px}
 .db{padding:18px 20px;overflow:auto;max-height:calc(90vh - 70px)}
 .drop{border:2px dashed var(--vio2);border-radius:14px;padding:22px;text-align:center;background:var(--soft)}
@@ -137,23 +144,125 @@ details{margin-top:12px;font-size:15px}
 details code{background:var(--soft);padding:1px 4px;border-radius:4px}
 .warn{background:light-dark(#fff3f6,#2a1520);border-left:3px solid var(--rose);padding:8px 12px;margin:10px 0;font-size:15px;border-radius:6px}
 .note{font-size:14px;color:var(--mute)}
+
+/* ---------- landing (beranda) ---------- */
+#landing,#soon{display:none}
+body.landing #landing,body.soonpg #soon{display:block}
+body.landing>header.top,body.landing .seq,body.landing main,body.landing>footer,body.landing .player,
+body.soonpg>header.top,body.soonpg .seq,body.soonpg main,body.soonpg>footer,body.soonpg .player{display:none!important}
+body.landing,body.soonpg{padding-bottom:0;background:var(--cream)}
+:root{--cream:light-dark(#fff8ec,#1a1420);--ink2:light-dark(#22172e,#f6efe2);--sun:#f2b84b;--sun2:#ffd27a;--line2:light-dark(#efe2c9,#2f2538)}
+.lnav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(4vw,16px);border-bottom:1px solid var(--line2);position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--cream) 88%,transparent);backdrop-filter:blur(10px)}
+.lnav .lb{display:flex;align-items:center;gap:10px;font:800 16px Manrope,sans-serif;color:var(--ink2);text-decoration:none}
+.lnav .lb img{width:42px;height:42px}
+.pill{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:13px 24px;min-height:48px;font:700 16px "DM Sans",sans-serif;text-decoration:none;border:2px solid var(--ink2);cursor:pointer}
+.pill.dark{background:var(--ink2);color:var(--sun);box-shadow:0 10px 24px -10px #22172e88}
+.pill.ghost{background:transparent;color:var(--ink2)}
+.pill.sunny{background:var(--sun);color:#22172e;border-color:#22172e;box-shadow:4px 4px 0 #22172e}.pill.sunny:hover{background:var(--sun2);box-shadow:6px 6px 0 #22172e;transform:translate(-1px,-1px)}
+.pill:hover{transform:translateY(-1px)}
+.lhero{position:relative;overflow:hidden;padding:clamp(36px,6vw,80px) max(4vw,16px) clamp(40px,6vw,72px);
+  background-image:repeating-linear-gradient(0deg,transparent 0 22px,var(--line2) 22px 23px,transparent 23px 30px),linear-gradient(var(--cream),var(--cream));background-size:100% 150px;background-position:0 40px}
+.lhero .in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:center}
+.eyb{display:inline-flex;align-items:center;gap:8px;font:700 15px "DM Sans",sans-serif;color:light-dark(#8a5a00,#ffd27a);margin:0 0 14px}
+.eyb::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px #f2b84b33}
+.lhero h1{font:800 clamp(40px,6.2vw,76px)/1 Manrope,sans-serif;letter-spacing:-.035em;color:var(--ink2);margin:0 0 20px;text-wrap:balance}
+.lhero h1 em{font-style:normal;color:var(--rose)}
+.lhero .lead{font:400 clamp(17px,1.6vw,20px)/1.6 "DM Sans",sans-serif;color:light-dark(#4a3f52,#cfc3d8);max-width:34em;margin:0 0 26px}
+.lhero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.lhero .fine{font-size:14px;color:light-dark(#6c6275,#a89cb5);margin:16px 0 0}
+.art{position:relative;aspect-ratio:1/1;max-width:500px;width:100%;justify-self:center}
+.orb{position:absolute;left:21%;top:21%;width:58%;aspect-ratio:1/1}
+.art .disc{display:none;position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sun2),var(--sun) 60%,#e39a2a);box-shadow:0 40px 80px -30px #c9831f99}
+.art svg.keys{position:absolute;inset:0;width:100%;height:100%;animation:spin 60s linear infinite}
+.art .logo{position:absolute;left:50%;top:50%;width:90%;transform:translate(-50%,-50%) rotate(-4deg);filter:drop-shadow(0 18px 24px #0004);border-radius:50%}
+.chip{position:absolute;background:light-dark(#fff,#2a2033);color:var(--ink2);border-radius:16px;padding:10px 14px;font:700 15px "DM Sans",sans-serif;box-shadow:0 14px 30px -12px #22172e55;display:flex;align-items:center;gap:8px;white-space:nowrap;animation:bob 5s ease-in-out infinite}
+.chip i{font-style:normal;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--sun);color:#22172e;font:800 13px Manrope,sans-serif;flex:none}
+.chip.c1{left:-4%;top:1%}.chip.c2{right:-4%;top:14%;animation-delay:-1.6s}.chip.c3{left:-4%;bottom:14%;animation-delay:-3s}.chip.c4{right:-4%;bottom:1%;animation-delay:-4.2s}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{50%{transform:translateY(-8px)}}
+.marq{background:var(--sun);border-block:2px solid var(--ink2);overflow:hidden;white-space:nowrap}
+.marq div{display:inline-flex;gap:30px;padding:16px 0;animation:mq 32s linear infinite;font:800 clamp(18px,2.2vw,26px) Manrope,sans-serif;color:#22172e;letter-spacing:-.01em}
+.marq span::after{content:"♪";margin-left:30px;font-size:.8em}
+@keyframes mq{to{transform:translateX(-50%)}}
+.lmenu{padding:clamp(44px,6vw,88px) max(4vw,16px);max-width:1180px;margin:0 auto}
+.lmenu h2{font:800 clamp(32px,4.4vw,54px)/1.05 Manrope,sans-serif;letter-spacing:-.03em;color:var(--ink2);margin:0 0 10px}
+.lmenu>p{color:light-dark(#4a3f52,#cfc3d8);font-size:18px;margin:0 0 30px;max-width:40em}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.mc{position:relative;display:flex;flex-direction:column;gap:10px;text-align:left;border:2px solid var(--ink2);border-radius:26px;padding:24px 24px 22px;background:light-dark(var(--pb),#241b2c);color:var(--ink2);cursor:pointer;min-height:230px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.mc:hover{transform:translateY(-3px);box-shadow:8px 8px 0 var(--ink2)}
+.mc .ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:30px;color:#fff;margin-bottom:6px}
+.mc h3{font:800 clamp(24px,2.6vw,30px)/1.1 Manrope,sans-serif;letter-spacing:-.02em;margin:0}
+.mc p{margin:0;font-size:16px;line-height:1.5;color:light-dark(#4a3f52,#cfc3d8)}
+.mc .st{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:14px}
+.mc .tag{font:700 13px "DM Sans",sans-serif;border-radius:999px;padding:5px 12px;background:#fff;color:#17613a;border:1.5px solid #17613a}
+.mc .tag.soon{background:light-dark(#ffffffb0,#3a2d45);color:light-dark(#4a3f52,#d6c3ea);border-color:transparent}
+.mc .go{width:44px;height:44px;border-radius:50%;background:var(--ink2);color:var(--sun);display:grid;place-items:center;font-size:20px;flex:none}
+.mc::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;opacity:.18;background:var(--k)}
+.feats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ft{display:flex;flex-direction:column;gap:6px;background:light-dark(var(--fb),#2a2033);border:2px solid light-dark(var(--ft),#5a4a66);border-radius:22px;padding:20px 18px;color:light-dark(var(--ft),#f3eaf7);box-shadow:5px 5px 0 light-dark(var(--ft),#000)}
+.ft i{font-style:normal;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:light-dark(var(--ft),#f3eaf7);color:light-dark(#fff,#22172e);font:800 17px Manrope,sans-serif;margin-bottom:6px}
+.ft b{font:800 18px/1.2 Manrope,sans-serif;letter-spacing:-.01em}
+.ft span{font-size:15px;line-height:1.45;color:inherit;opacity:.85}
+.lfoot{border-top:2px solid var(--ink2);padding:28px max(4vw,16px) 36px;text-align:center;color:light-dark(#4a3f52,#cfc3d8);font-size:14px;background:var(--cream)}
+.lfoot a{color:var(--rose)}
+.soonbox{max-width:720px;margin:clamp(40px,8vw,90px) auto;padding:0 max(4vw,16px);text-align:center}
+.soonbox .ic{width:96px;height:96px;border-radius:28px;display:grid;place-items:center;font-size:44px;color:#fff;margin:0 auto 18px}
+.soonbox h1{font:800 clamp(34px,5vw,56px)/1.05 Manrope,sans-serif;letter-spacing:-.03em;color:var(--ink2);margin:0 0 12px}
+.soonbox p{font-size:18px;color:light-dark(#4a3f52,#cfc3d8);margin:0 auto 26px;max-width:32em}
+.crumb{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:#e7dcf2;font:600 15px "DM Sans",sans-serif;padding:6px 0;margin-bottom:8px;cursor:pointer}
+.crumb:hover{color:#fff}
+@media(max-width:520px){.lnav .lb{font-size:14px}.lnav .lb img{width:36px;height:36px}.lnav .pill{padding:8px 14px!important;font-size:14px}}
+@media(max-width:820px){.feats{order:2}.lhero .in{grid-template-columns:minmax(0,1fr)}.art{max-width:420px;order:-1;aspect-ratio:auto}.orb{position:relative;left:auto;top:auto;width:62%;margin:0 auto 18px}.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.chip{position:static;animation:none;white-space:normal;line-height:1.25}.mgrid{grid-template-columns:minmax(0,1fr)}.chip{font-size:13px;padding:8px 11px}}
+@media(prefers-reduced-motion:reduce){.art svg.keys,.chip,.marq div{animation:none}}
 @media(max-width:600px){.n{font-size:19px}.l{font-size:16px}.player .pbtn.hide-s{display:none}.top{padding-top:16px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
+<div id="landing">
+  <nav class="lnav"><a class="lb" href="#" data-home><img src="logo.png" alt="" onerror="this.style.display='none'">Organis Yang Berbahagia</a></nav>
+  <section class="lhero"><div class="in">
+    <div>
+      <p class="eyb">Panduan latihan untuk pemazmur, koor, &amp; organis</p>
+      <h1>Dengar nadanya. Ikuti <em>notasinya.</em> Bernyanyi.</h1>
+      <p class="lead">Panduan Belajar Notasi untuk Mazmur &amp; Alleluya, Puji Syukur, Madah Bakti, dan lagu-lagu lepas. Setiap angka dan suku kata menyala saat dimainkan, nada dasar dan tempo bisa diatur, chord ikut berpindah.</p>
+      <div class="cta"><button class="pill sunny" id="toMenu">Lihat semua panduan ↓</button></div>
+      <p class="fine">Gratis, langsung di browser. Bisa dibuka di HP maupun laptop.</p>
+    </div>
+    <div class="feats">
+      <div class="ft" style="--fb:rgba(176,140,226,.2);--ft:#4b2a78"><i>♯♭</i><b>Nada dasar bisa disesuaikan</b><span>Naik-turunkan sesuai jangkauan suaramu.</span></div>
+      <div class="ft" style="--fb:rgba(240,140,176,.2);--ft:#8a1f4a"><i>♪</i><b>Tempo bisa diatur</b><span>Latihan pelan dulu, lalu naikkan perlahan.</span></div>
+      <div class="ft" style="--fb:rgba(110,196,166,.2);--ft:#145c4b"><i>✦</i><b>Suku kata menyala</b><span>Ikuti angka dan lirik yang menyala saat diputar.</span></div>
+      <div class="ft" style="--fb:rgba(246,176,96,.22);--ft:#7a4300"><i>C</i><b>Chord mengikuti nada dasar</b><span>Iringan langsung menyesuaikan nada yang dipilih.</span></div>
+    </div>
+  </div></section>
+  <div class="marq" aria-hidden="true"><div><span>Mazmur &amp; Alleluya</span><span>Puji Syukur</span><span>Madah Bakti</span><span>Lagu Lepas</span><span>Chord mengikuti nada dasar</span><span>Notasi angka menyala</span><span>Atur tempo &amp; nada</span><span>Mazmur &amp; Alleluya</span><span>Puji Syukur</span><span>Madah Bakti</span><span>Lagu Lepas</span><span>Chord mengikuti nada dasar</span><span>Notasi angka menyala</span><span>Atur tempo &amp; nada</span></div></div>
+  <section class="lmenu" id="menu">
+    <p class="eyb">Pilih panduan</p>
+    <h2>Mau latihan apa hari ini?</h2>
+    <p>Pilih salah satu panduan di bawah. Panduan lain sedang disiapkan dan akan muncul satu per satu.</p>
+    <div class="mgrid"><button class="mc" data-go="mazmur" style="--pb:rgba(186,156,230,.35);--k:#6b4590"><span class="ic" style="background:#6b4590">♪</span><h3>Mazmur &amp; Alleluya</h3><p>Mazmur tanggapan dan bait pengantar Injil untuk setiap Minggu dan hari raya, lengkap dengan chord.</p><span class="st"><span class="tag " id="tag-mazmur">Tersedia</span><span class="go" aria-hidden="true">→</span></span></button><button class="mc" data-go="puji-syukur" style="--pb:rgba(244,160,190,.35);--k:#c8336b"><span class="ic" style="background:#c8336b">♫</span><h3>Puji Syukur</h3><p>Lagu-lagu Puji Syukur dengan 4 suara (S·A·T·B) yang bisa dinyalakan per suara, plus chord.</p><span class="st"><span class="tag soon" id="tag-puji-syukur">Segera hadir</span><span class="go" aria-hidden="true">→</span></span></button><button class="mc" data-go="madah-bakti" style="--pb:rgba(140,210,185,.35);--k:#1f7a6d"><span class="ic" style="background:#1f7a6d">♬</span><h3>Madah Bakti</h3><p>Lagu-lagu Madah Bakti untuk latihan koor dan umat, dengan panduan nada dan chord.</p><span class="st"><span class="tag soon" id="tag-madah-bakti">Segera hadir</span><span class="go" aria-hidden="true">→</span></span></button><button class="mc" data-go="lagu-lepas" style="--pb:rgba(250,196,130,.38);--k:#e08a1e"><span class="ic" style="background:#e08a1e">♩</span><h3>Lagu Lepas</h3><p>Lagu-lagu rohani lain di luar buku nyanyian: komuni, persembahan, Natal, Paskah, dan lainnya.</p><span class="st"><span class="tag soon" id="tag-lagu-lepas">Segera hadir</span><span class="go" aria-hidden="true">→</span></span></button></div>
+  </section>
+  <footer class="lfoot">Panduan Belajar Notasi · dibuat oleh <b>Organis Yang Berbahagia</b><br>Notasi Mazmur &amp; Alleluya diambil dari <a href="https://belajarmazmurtanggapa.blogspot.com">belajarmazmurtanggapa.blogspot.com</a></footer>
+</div>
+<div id="soon">
+  <nav class="lnav"><a class="lb" href="#" data-home><img src="logo.png" alt="" onerror="this.style.display='none'">Organis Yang Berbahagia</a><button class="pill ghost" data-home style="padding:10px 20px;min-height:44px">← Menu utama</button></nav>
+  <div class="soonbox"><div class="ic" id="soonIc"></div><p class="eyb" style="justify-content:center">Segera hadir</p><h1 id="soonT"></h1><p id="soonD"></p><button class="pill dark" data-home>← Kembali ke menu utama</button></div>
+</div>
 <header class="top"><div class="wrap">
-  <div class="brand"><img src="logo.png" onerror="this.style.display='none'" alt="Logo Organis Yang Berbahagia" width="72" height="72"><div>
+  <button class="crumb" data-home>← Menu utama</button>
+  <div class="brand"><a href="#" id="home" data-home title="Kembali ke menu utama" aria-label="Kembali ke menu utama"><img src="logo.png" onerror="this.style.display='none'" alt="Logo Organis Yang Berbahagia" width="72" height="72"></a><div>
   <h1>Panduan Belajar Notasi Mazmur &amp; Alleluya</h1>
   <p class="by">dibuat oleh <b>Organis Yang Berbahagia</b></p></div></div>
-  <div class="headrow"><div><p id="songT" class="songT"></p><p id="occ" class="occ"></p></div><button class="back" id="bBack">← Pilih tanggal lain / kembali ke menu utama</button></div>
+  <div class="headrow"><div><p id="songT" class="songT"></p><p id="occ" class="occ"></p></div><button class="back" id="bBack">← Pilih tanggal lain</button></div>
   <p class="pick" id="pick"></p><div class="row tabs" id="tabs"></div>
   <div class="ctl">
     <div><label>Nada dasar <span class="v" id="kOrig"></span></label>
       <div class="step"><button id="kDn" aria-label="Turunkan nada">−</button><span class="kv" id="kNow">do = D</span><button id="kUp" aria-label="Naikkan nada">+</button></div></div>
     <div><label for="tempo">Tempo refren <span class="v" id="tempoV"></span></label><input type="range" id="tempo" min="40" max="180" step="1"></div>
     <div><label for="laju">Laju ayat (resitasi) <span class="v" id="lajuV"></span></label><input type="range" id="laju" min="50" max="160" step="5" value="100"></div>
-    <div><label for="inst">Suara pemandu</label><select id="inst"><option value="piano">Piano</option><option value="voice">Vokal "uu"</option><option value="organ">Organ lembut</option></select></div>
+    <div><label for="inst">Suara pemandu</label><select id="inst"><option value="piano">Piano</option><option value="voice">Vokal "uu"</option><option value="organ">Organ</option></select></div>
+    <div id="chCtl" hidden><label for="mode">Iringan chord</label><select id="mode"><option value="both">Melodi + chord</option><option value="melody">Melodi saja</option><option value="chord">Chord saja (latihan tanpa melodi)</option></select>
+      <label for="chvol" style="margin-top:10px">Volume chord <span class="v" id="chvolV"></span></label><input type="range" id="chvol" min="0" max="100" step="5"></div>
     <div><label for="oct">Oktaf</label><select id="oct"><option value="0">Normal (suara wanita/anak)</option><option value="-1">Satu oktaf lebih rendah (pria)</option><option value="1">Satu oktaf lebih tinggi</option></select></div>
     <div><label for="vol">Volume</label><input type="range" id="vol" min="0" max="100" value="80">
       <div class="chk"><label><input type="checkbox" id="metro"> Ketukan</label><label><input type="checkbox" id="cin" checked> Hitungan awal</label><label><input type="checkbox" id="drone"> Dengung do</label></div></div>
@@ -195,21 +304,21 @@ const A951=`== Alleluya 951
 do = f, 2/2
 tempo = 84
 [refren]
-1{Al-} 3{le-} 4{lu-} | 5{ya,} . 4{al-} 5{le-} | 6{lu-} . 5{ya,} . | 3{al-} 4{le-} (3 2){lu-} | 1{ya.} ||
+1{Al-} [Am]3{le-} 4{lu-} | [C]5{ya,} . [Dm]4{al-} 5{le-} | [F]6{lu-} . [G]5{ya,} . | [Am]3{al-} 4{le-} [G](3 2){lu-} | [C]1{ya.} ||
 [ayat]
 `;
 const A955=`== Alleluya 955
 do = es, 2/2
 tempo = 84
 [refren]
-5{Al-} . (6 5){le-} | (4 3){lu-} 2{ya,} 0 | 4{al-} . (5 4){le-} | (3 2){lu-} 1{ya,} 3{al-} | 2{le-} . (1 7<){lu-} | 1{ya.} . ||
+[C]5{Al-} . [Am](6 5){le-} | [Dm](4 3){lu-} 2{ya,} 0 | [G]4{al-} . (5 4){le-} | [C](3 2){lu-} 1{ya,} 3{al-} | [Dm]2{le-} . [G](1 7<){lu-} | [C]1{ya.} . ||
 [ayat]
 `;
 const A953=`== Alleluya 953
 do = d, 2/2
 tempo = 84
 [refren]
-(3 2){Al-} | (3 2 1 3){le-} | (5 6){lu-} 5{ya,} . | 6{al-} 1>{le-} (1> 7){lu-} | 5{ya.} . ||
+[C](3 2){Al-} | [C/G]3{le-} 2 [Am]1 3 | [Em]5{lu-} 6 [G]5{ya,} . | [F]6{al-} 1>{le-} [Dm]1>{lu-} 7 | [G]5{ya.} . ||
 [ayat]
 `;
 const LIB=[
@@ -218,26 +327,32 @@ const LIB=[
 do = d, 4/4
 tempo = 72
 [refren]
-3{Ya} 5_{Al-} 4_{lah} 3_{pu-} 3_{lih-} 3_{kan-} 3_{lah} | (4 5_ 6_){ka-} 5{mi,} 6_{bu-} 6_{at-} | 5{lah} 5_{wa-} 5_{jah-} 4_{Mu} 4_{ber-} (3_ 4_){si-} | 5{nar,}
-6:1/3{ma-} 5:1/3{ka} 4:1/3{se-} 3_{la-} 3_{mat-} 2{lah} | (3_ 2_){ka-} 1{mi.} . . ||
+[C]3{Ya} (5_ 4_){Al-} [Am]3_{lah} 3_{pu-} 3_{lih-} 3_{kan-} | [Dm]4{lah} (5_ 6_){ka-} [G]5{mi,} 6_{bu-} 6_{at-} | [C]5{lah} 5_{wa-} 5_{jah-} [F]4_{Mu} 4_{ber-} (3_ 4_){si-} | [G]5{nar,}
+6:1/3{ma-} 5:1/3{ka} 4:1/3{se-} [C]3_{la-} 3_{mat-} [G]2{lah} | [C](3_ 2_){ka-} 1{mi.} [(G)]. . ||
 [ayat 1]
-3...{Hai gembala Isra-el,} 5...{pasanglah te-} 6_{li-} 5_{nga-} 5{Mu,} '
-3...{Engkau, yang duduk di atas para} 4{ke-} 5{rub,} |
-6...{tampillah ber-} 5{si-} 6{nar,} '
-6_{bang-} 5_{kit-} 4_{kan-} 3...{lah keperkasa-} (3_ 2_){an-} 3{Mu.} ||
+[C]3...{Hai gembala Isra-el,} [Em]5...{pasanglah te-} 6_{li-} 5_{nga-} [G]5{Mu,} '
+[Am]3...{Engkau, yang duduk di atas para} 4{ke-} [C]5{rub,} |
+[F]6...{tampillah ber-} 5{si-} 6{nar,} '
+[Dm]6_{bang-} 5_{kit-} 4_{kan-} 3...{lah keperkasa-} [G](3_ 2_){an-} [C]3{Mu.} ||
 [ayat 2]
-3...{Ya Allah semesta a-} 5...{lam, kemba-} (6_ 5_){li-} 5{lah,} '
-3...{pandanglah dari langit, dan li-} 4{hat-} 5{lah!} |
-6...{Tengoklah pohon anggur} 5{i-} 6{ni,} '
-6_{lin-} 5_{dung-} 4_{i-} 3...{lah batang yang ditanam oleh tangan ka-} (3_ 2_){nan-} 3{Mu!} ||
+[C]3...{Ya Allah semesta a-} [Em]5...{lam, kemba-} (6_ 5_){li-} [G]5{lah,} '
+[Am]3...{pandanglah dari langit, dan li-} 4{hat-} [C]5{lah!} |
+[F]6...{Tengoklah pohon anggur} 5{i-} 6{ni,} '
+[Dm]6_{lin-} 5_{dung-} 4_{i-} 3...{lah batang yang ditanam oleh tangan ka-} [G](3_ 2_){nan-} [C]3{Mu!} ||
 [ayat 3]
-3...{Kiranya tangan-Mu melindungi} 5...{o-rang yang ada di sebelah ka-} (6_ 5_){nan-} 5{Mu,} '
-3...{anak manusia yang telah Kauteguhkan bagi di-} 4{ri-} 5{Mu.} |
-6...{Maka kami tidak akan menyimpang dari pa-} 5{da-} 6{Mu.} '
-6_{Bi-} 5_{ar-} 4_{lah} 3...{kami hidup, maka kami akan menyerukan na-} (3_ 2_){ma-} 3{Mu.} ||
+[C]3...{Kiranya tangan-Mu melindungi} [Em]5...{o-rang yang ada di sebelah ka-} (6_ 5_){nan-} [G]5{Mu,} '
+[Am]3...{anak manusia yang telah Kauteguhkan bagi di-} 4{ri-} [C]5{Mu.} |
+[F]6...{Maka kami tidak akan menyimpang dari pa-} 5{da-} 6{Mu.} '
+[Dm]6_{Bi-} 5_{ar-} 4_{lah} 3...{kami hidup, maka kami akan menyerukan na-} [G](3_ 2_){ma-} [C]3{Mu.} ||
 
-`+A951+`5...{Perlihatkanlah kepada kami kasih setia-Mu,} 4_{ya} (3_ 2_){Tu-} 3{han} |
-3...{dan berikanlah kepada kami keselamatan yang dari} 4_{pa-} 3_{da-} 2{Mu.} ||
+== Alleluya 951
+do = f, 2/2
+tempo = 84
+[refren]
+1{Al-} [Am]3{le-} 4{lu-} | [C]5{ya,} . [Dm]4{al-} 5{le-} | [F]6{lu-} . [G]5{ya,} . | [Am]3{al-} 4{le-} [G](3 2){lu-} | [C]1{ya.} ||
+[ayat]
+[C]5...{Perlihatkanlah kepada kami kasih setia-Mu,} 4_{ya} (3_ 2_){Tu-} [Am]3{han} |
+[Am]3...{dan berikanlah kepada kami keselamatan yang dari} [Dm]4_{pa-} 3_{da-} [G]2{Mu.} ||
 `},
 {id:"2026-11-30",date:"30 November 2026",label:"Pesta St. Andreas Rasul"},
 {id:"2026-12-03",date:"3 Desember 2026",label:"Pesta St. Fransiskus Xaverius, Imam dan Pelindung Karya Misi"},
@@ -245,194 +360,237 @@ tempo = 72
 do = a, 4/4
 tempo = 72
 [refren]
-3_{Per-} (4 5){li-} | 7_{hat-} 7_{kan-} 7{lah} ._ 3>_{ke-} 1>_{pa-} 7_{da} | 5{ka-} 5{mi} 3_{ka-} 3_{sih} ._ 3_{se-} | 4_{tia-} 3_{Mu,} 4_{ya} 5_{Tu-}
-5{han,} ._ 3={dan} 4={be-} | 5_{ri-} 7_{lah} 7_{ka-} 7_{mi} ._ 1>={ke-} 3>={se-} 1>_{la-} 7_{mat-} | 5_{an} .= 3={yang} 3_{da-} 5_{ri} 5{pa-} 4{da-} | 3{Mu.} . ._ ||
+3_{Per-} (4 5){li-} | [Em]7_{hat-} 7_{kan-} 7{lah} [F]._ 3>_{ke-} 1>_{pa-} 7_{da} | [Em]5{ka-} 5{mi} [C]3_{ka-} 3_{sih} ._ 3_{se-} | [F]4_{tia-} 3_{Mu,} 4_{ya} 5_{Tu-}
+[C]5{han,} ._ 3={dan} 4={be-} | [Em]5_{ri-} 7_{lah} 7_{ka-} 7_{mi} ._ [F]1>={ke-} 3>={se-} 1>_{la-} 7_{mat-} | [Em]5_{an} .= 3={yang} 3_{da-} 5_{ri} [F]5{pa-} 4{da-} | [Em]3{Mu.} . ._ ||
 [ayat 1]
-3...{Aku ingin mende-} 4...{ngarkan apa yang hendak difirmankan} 5{Tu-} 5{han.} '
-5...{Bukankah} 7...{Ia hendak berbicara tentang} (1>_ 7_){da-} 5{mai?} |
-3...{Sungguh, kesela-} 4...{matan dari} 5...{Tuhan dekat pada orang-orang yang} 7{tak-} 7{wa,} '
-7...{dan kemuliaan-Nya diam di negeri} (5_ 7_){ki-} 1>{ta.} ||
+[C]3...{Aku ingin mende-} [F]4...{ngarkan apa yang hendak difirmankan} [C]5{Tu-} 5{han.} '
+[Em]5...{Bukankah} 7...{Ia hendak berbicara tentang} (1>_ 7_){da-} [C]5{mai?} |
+[C]3...{Sungguh, kesela-} [F]4...{matan dari} [G]5...{Tuhan dekat pada orang-orang yang} 7{tak-} 7{wa,} '
+[Em]7...{dan kemuliaan-Nya diam di negeri} (5_ 7_){ki-} [C]1>{ta.} ||
 [ayat 2]
-3...{Kasih dan keseti-} 4...{aan akan berte-} 5{mu,} '
-5...{keadilan dan damai se-} 7...{jahtera akan berpe-} (1>_ 7_){luk-} 5{an.} |
-3_{Ke-} 3_{se-} 3_{ti-} 4...{aan akan} 5...{tumbuh dari} 7{bu-} 7{mi,} '
-7...{dan keadilan akan merunduk dari} (5_ 7_){la-} 1>{ngit.} ||
+[C]3...{Kasih dan keseti-} [F]4...{aan akan berte-} [C]5{mu,} '
+[Em]5...{keadilan dan damai se-} 7...{jahtera akan berpe-} (1>_ 7_){luk-} [C]5{an.} |
+[C]3_{Ke-} 3_{se-} 3_{ti-} [F]4...{aan akan} [G]5...{tumbuh dari} 7{bu-} 7{mi,} '
+[Em]7...{dan keadilan akan merunduk dari} (5_ 7_){la-} [C]1>{ngit.} ||
 [ayat 3]
-3...{Tuhan sen-} 4...{diri akan memberikan kesejahte-} 5{ra-} 5{an,} '
-5...{dan negeri} 7...{kita akan memberikan} (1>_ 7_){ha-} 5{sil.} |
-3_{Ke-} 3_{a-} 4...{dilan akan ber-} 5...{jalan di hadap} 7{an-} 7{Nya,} '
-7...{dan damai akan menyusul di bela-} (5_ 7_){kang-} 1>{Nya.} ||
+[C]3...{Tuhan sen-} [F]4...{diri akan memberikan kesejahte-} [C]5{ra-} 5{an,} '
+[Em]5...{dan negeri} 7...{kita akan memberikan} (1>_ 7_){ha-} [C]5{sil.} |
+[C]3_{Ke-} 3_{a-} [F]4...{dilan akan ber-} [G]5...{jalan di hadap} 7{an-} 7{Nya,} '
+[Em]7...{dan damai akan menyusul di bela-} (5_ 7_){kang-} [C]1>{Nya.} ||
 
 == Alleluya 962
 do = a, 4/4
 tempo = 76
 [refren]
-3_{Al-} 4{le-} 5{lu-} | 3{ya,} ._ 3_{al-} 4{le-} 5{lu-} | 7{ya,} ._ 7_{al-} 5{le-} (7_ 1>_){lu-} | 3>{ya,} ._ 3>_{al-} 4>{le-} 5>{lu-} | 3>{ya.} ._ ||
+3_{Al-} [F]4{le-} 5{lu-} | [Em]3{ya,} ._ [C]3_{al-} 4{le-} 5{lu-} | [Em]7{ya,} ._ 7_{al-} [G]5{le-} (7_ 1>_){lu-} | [Em]3>{ya,} ._ 3>_{al-} [C]4>{le-} 5>{lu-} | [Em]3>{ya.} ._ ||
 [ayat]
-3_{Si-} 4_{ap-} 5...{kanlah jalan bagi Tuhan, luruskanlah jalan} 7_{ba-} 1>_{gi-} 7{Nya;} |
-5_{dan} 1>_{se-} 7...{mua orang akan melihat keselamatan yang dari} (5_ 4_){Tu-} 3{han.} ||
+3_{Si-} 4_{ap-} [C]5...{kanlah jalan bagi Tuhan, luruskanlah jalan} 7_{ba-} 1>_{gi-} [G]7{Nya;} |
+5_{dan} 1>_{se-} [G]7...{mua orang akan melihat keselamatan yang dari} (5_ 4_){Tu-} [Em]3{han.} ||
 `},
 {id:"2026-12-08",date:"8 Desember 2026",label:"Hari Raya S.P. Maria Dikandung Tanpa Dosa"},
-{id:"2026-12-13",date:"13 Desember 2026",label:"Hari Minggu Adven III"},
+{id:"2026-12-13",date:"13 Desember 2026",label:"Hari Minggu Adven III",src:`== Mazmur Tanggapan · Refren 075
+do = f, 2/4
+tempo = 72
+[refren]
+3_{Ji-} 4_{wa-} | [C]5{ku} ._ 5_{ber-} | [F]4{so-} 4{rak-} | [C](3_ 2_){so-} 1_{rai} 1_{di} | [F]4{da-} 4{lam} | [Am](3_ 2_){Al-} 3{lah-} | [C]1{ku.} . | [(G)]. ||
+[ayat 1]
+[C]3...{Aku mengagungkan} [G]2{Tu-} [Am]3{han} '
+[C]3...{hatiku bersukaria karena Allah, penye-} 3_{la-} 5_{mat-} [G]5{ku.} |
+[Dm]4...{Sebab Ia memperhatikan daku. hamba-Nya yang hina} 3{i-} [G]2{ni.} '
+2{Mu-} [Dm]4...{lai sekarang aku disebut Yang Bahagia, oleh seka-} [G]3_{li-} 2_{an} [C]3{bang-} 1{sa.} ||
+[ayat 2]
+[C]3...{Sebab perbuatan besar dikerjakan bagiku oleh Yang Mahaku-} [G]2{a-} [Am]3{sa,} '
+[C]3...{kuduslah} 3_{na-} 5_{ma-} [G]5{Nya.} |
+[Dm]4...{Kasih sayang-Nya turun-te-} 3{mu-} [G]2{run,} '
+2{ke-} [Dm]4...{pada o-} [G]3_{rang} 2_{yang} [C]3{tak-} 1{wa.} ||
+[ayat 3]
+[C]3...{Orang lapar dikenyangkan-Nya dengan keba-} [G]2{ik-} [Am]3{an,} '
+[C]3...{orang kaya diusir-Nya pergi dengan ta-} 3_{ngan} 5_{ko-} [G]5{song.} |
+[Dm]4...{Menurut janji-Nya kepada leluhur} 3{ki-} [G]2{ta,} '
+2{Al-} [Dm]4...{lah telah menolong Isra-} [G]3_{el,} 2_{ham-} [C]3{ba-} 1{Nya.} ||
+
+== Alleluya 960
+do = f, 4/4
+tempo = 76
+[refren]
+6<_{Al-} [Dm](1_ 2_){le-} | [C]3{lu-} 3{ya,} [Am]._ 2_{al-} (3_ 5_){le-} | [C](5= 6= 5_){lu-} 5{ya,} [Am]._ 3_{al-} [Dm](2_ 1_){le-} | [F](2_ 1_){lu-} [C]1{ya.} ._ ||
+[ayat]
+[C]3...{Roh Tuhan ada} 1_{pa-} 2_{da-} [Am]3{ku.} |
+[F]1...{Ia telah mengutus aku untuk menyampaikan kabar ba-ik} ' 1...{kepada orang-orang} [Dm](6<_ 1_){seng-} [F](2_ 1_){sa-} [C]1{ra.} ||
+`},
 {id:"2026-12-20",date:"20 Desember 2026",label:"Hari Minggu Adven IV",src:`== Mazmur Tanggapan · Refren 076
 do = f, 4/4
 tempo = 72
 [refren]
-5<:1/3{A-} 5<:1/3{ku} 5<:1/3{hen-} | 1{dak} ._ 2_{me-} 3_{nya-} 4_{nyi-} 5{kan} | 6:1/3{ka-} 5:1/3{sih} 4:1/3{se-} 3_{ti-} 3_{a-} 2_{Mu} 1_{ya} 2:1/3{Tu-} 5<:1/3{han} 5<:1/3{se-} |
-6<_{la-} 1_{ma-} 1_{la-} 7<_{ma-} 1{ya.} . ||
+[G]5<:1/3{A-} 5<:1/3{ku} 5<:1/3{hen-} | [C]1{dak} ._ 2_{me-} 3_{nya-} 4_{nyi-} 5{kan} | [F]6:1/3{ka-} 5:1/3{sih} 4:1/3{se-} [C]3_{ti-} 3_{a-} [G]2_{Mu} 1_{ya} 2:1/3{Tu-} 5<:1/3{han} 5<:1/3{se-} |
+[F]6<_{la-} 1_{ma-} [G]1_{la-} 7<_{ma-} [C]1{ya.} . ||
 [ayat 1]
-5<_{A-} 5<_{ku} 1...{hendak menyanyikan kasih setia Tuhan sela-} 2_{ma-} 3_{la-} 4_{ma-} 5{nya,} '
-5...{hendak menuturkan kesetiaan-Mu turun-} 6_{te-} (5_ 4_){mu-} 3{run.} |
-3...{Sebab kasih setia-Mu dibangun untuk selama-} 2_{la-} 1_{ma-} 2{nya} '
-5<{ke-} 6<...{setiaan-Mu tegak seperti} (1_ 7<_){la-} 1{ngit.} ||
+5<_{A-} 5<_{ku} [C]1...{hendak menyanyikan kasih setia Tuhan sela-} 2_{ma-} 3_{la-} 4_{ma-} [Em]5{nya,} '
+[G]5...{hendak menuturkan kesetiaan-Mu turun-} 6_{te-} (5_ 4_){mu-} [C]3{run.} |
+[C]3...{Sebab kasih setia-Mu dibangun untuk selama-} 2_{la-} 1_{ma-} [G]2{nya} '
+5<{ke-} [F]6<...{setiaan-Mu tegak seperti} [G](1_ 7<_){la-} [C]1{ngit.} ||
 [ayat 2]
-5<_{Eng-} 5<_{kau} 1...{berkata, “Telah Kuikat perjanjian dengan orang} 2_{pi-} 3_{lih-} 4_{an-} 5{Ku.} '
-5...{Aku telah bersumpah kepada Daud,} 6_{ham-} (5_ 4_){ba-} 3{Ku:} |
-3...{Aku hendak menegakkan anak cucumu untuk selama-} 2_{la-} 1_{ma-} 2{nya,} '
-5<{dan} 6<...{membangun takhtamu turun-te-} (1_ 7<_){mu-} 1{run.”} ||
+5<_{Eng-} 5<_{kau} [C]1...{berkata, “Telah Kuikat perjanjian dengan orang} 2_{pi-} 3_{lih-} 4_{an-} [Em]5{Ku.} '
+[G]5...{Aku telah bersumpah kepada Daud,} 6_{ham-} (5_ 4_){ba-} [C]3{Ku:} |
+[C]3...{Aku hendak menegakkan anak cucumu untuk selama-} 2_{la-} 1_{ma-} [G]2{nya,} '
+5<{dan} [F]6<...{membangun takhtamu turun-te-} [G](1_ 7<_){mu-} [C]1{run.”} ||
 [ayat 3]
-5<_{Di-} 5<_{a} 1...{pun akan berseru kepada-Ku, “Bapa-} 2_{ku-} 3_{lah} 4_{Eng-} 5{kau,} '
-5...{Allahku dan gunung batu kesela-} 6_{mat-} (5_ 4_){an-} 3{ku.”} |
-3...{Untuk selama-lamanya Aku akan memelihara kasih setia-Ku bagi} (2_ 1_){di-} 2{a,} '
-5<{dan} 6<...{perjanjian-Ku dengannya akan Kupegang} (1_ 7<_){te-} 1{guh.} ||
+5<_{Di-} 5<_{a} [C]1...{pun akan berseru kepada-Ku, “Bapa-} 2_{ku-} 3_{lah} 4_{Eng-} [Em]5{kau,} '
+[G]5...{Allahku dan gunung batu kesela-} 6_{mat-} (5_ 4_){an-} [C]3{ku.”} |
+[C]3...{Untuk selama-lamanya Aku akan memelihara kasih setia-Ku bagi} (2_ 1_){di-} [G]2{a,} '
+5<{dan} [F]6<...{perjanjian-Ku dengannya akan Kupegang} [G](1_ 7<_){te-} [C]1{guh.} ||
 
-`+A955+`1_{Se-} 2_{sung-} 3...{guhnya aku ini hamba} (2_ 1_){Tu-} 2{han;} |
-4...{jadilah padaku menurut perka-} 3_{ta-} 4_{an-} 5{Mu.} ||
+`+A955+`1_{Se-} 2_{sung-} [C]3...{guhnya aku ini hamba} (2_ 1_){Tu-} [G]2{han;} |
+[Dm]4...{jadilah padaku menurut perka-} 3_{ta-} 4_{an-} [G]5{Mu.} ||
 `},
 {id:"2026-12-24-sore",date:"24 Desember 2026",label:"Sore Menjelang Hari Raya Natal",src:`== Mazmur Tanggapan · Refren 005
 do = f, 2/4
 tempo = 72
 [refren]
-5<{A-} 1_{ku} 2_{hen-} | 3{dak} 3_{me-} 6_{nya-} | 5{nyi-} 3{kan} | 4{ka-} 4_{sih} 4_{se-} | 3_{ti-} 2_{a} 5{Tu-} | 3_{han} 1_{se-} 2_{la} 5<_{ma-} | 3{la-} 2{ma-} | 1{nya.} . ||
+[C]5<{A-} 1_{ku} 2_{hen-} | [Am]3{dak} 3_{me-} 6_{nya-} | [Em]5{nyi-} 3{kan} | [F]4{ka-} 4_{sih} 4_{se-} | [G]3_{ti-} 2_{a} 5{Tu-} | [C]3_{han} 1_{se-} [G]2_{la} 5<_{ma-} | [C]3{la-} [G]2{ma-} | [C]1{nya.} . ||
 [ayat 1]
-1_{Eng-} 2_{kau} 3...{berkata ya Tuhan, “Telah Kuikat perjanjian dengan orang} 4_{pi-} 3_{lih-} 2_{an-} 3{Ku.} '
-2...{Aku telah bersumpah kepada Daud,} 1_{ham-} 3_{ba-} 2{Ku:} |
-3_{A-} 4_{ku} 5...{hendak menegakkan anak cucumu untuk sela-} 6_{ma-} 5_{la-} 4_{ma-} 3{nya,} '
-2...{dan membangun takhtamu turun-} 3{te-} (4_ 2_){mu-} 1{run.”} ||
+1_{Eng-} 2_{kau} [C]3...{berkata ya Tuhan, “Telah Kuikat perjanjian dengan orang} 4_{pi-} 3_{lih-} 2_{an-} [Am]3{Ku.} '
+[Dm]2...{Aku telah bersumpah kepada Daud,} 1_{ham-} 3_{ba-} [G]2{Ku:} |
+3_{A-} 4_{ku} [C]5...{hendak menegakkan anak cucumu untuk sela-} 6_{ma-} 5_{la-} 4_{ma-} [Am]3{nya,} '
+[Dm]2...{dan membangun takhtamu turun-} 3{te-} [G](4_ 2_){mu-} [C]1{run.”} ||
 [ayat 2]
-1_{Ber-} 2_{ba-} 3...{hagialah bangsa yang tahu ber-} 4_{so-} 3_{rak-} 2_{so-} 3{rai,} '
-2...{ya Tuhan, mereka hidup dalam cahaya} 1_{wa-} 3_{jah-} 2{Mu.} |
-3_{Ka-} 4_{re-} 5...{na nama-Mu mereka bersorak-sorai se-} 6_{pan-} 5_{jang} 4_{ha-} 3{ri,} '
-2...{dan karena keadilan-Mu mereka berme-} 3{gah-} (4_ 2_){me-} 1{gah} ||
+1_{Ber-} 2_{ba-} [C]3...{hagialah bangsa yang tahu ber-} 4_{so-} 3_{rak-} 2_{so-} [Am]3{rai,} '
+[Dm]2...{ya Tuhan, mereka hidup dalam cahaya} 1_{wa-} 3_{jah-} [G]2{Mu.} |
+3_{Ka-} 4_{re-} [C]5...{na nama-Mu mereka bersorak-sorai se-} 6_{pan-} 5_{jang} 4_{ha-} [Am]3{ri,} '
+[Dm]2...{dan karena keadilan-Mu mereka berme-} 3{gah-} [G](4_ 2_){me-} [C]1{gah} ||
 [ayat 3]
-1_{Di-} 2_{a} 3...{pun akan berseru kepada-Ku, “Bapa-} 4_{ku-} 3_{lah} 2_{Eng-} 3{kau,} '
-2...{Allahku dan gunung batu kesela-} 1_{mat-} 3_{an-} 2{ku.”} |
-3_{Un-} 4_{tuk} 5...{selama-lamanya Aku akan memelihara kasih setia-Ku} 6_{ba-} 6_{gi} (5_ 4_){di-} 3{a,} '
-2...{dan perjanjian-Ku dengannya akan Kupe-} 3{gang} (4_ 2_){te-} 1{guh.} ||
+1_{Di-} 2_{a} [C]3...{pun akan berseru kepada-Ku, “Bapa-} 4_{ku-} 3_{lah} 2_{Eng-} [Am]3{kau,} '
+[Dm]2...{Allahku dan gunung batu kesela-} 1_{mat-} 3_{an-} [G]2{ku.”} |
+3_{Un-} 4_{tuk} [C]5...{selama-lamanya Aku akan memelihara kasih setia-Ku} 6_{ba-} 6_{gi} (5_ 4_){di-} [Am]3{a,} '
+[Dm]2...{dan perjanjian-Ku dengannya akan Kupe-} 3{gang} [G](4_ 2_){te-} [C]1{guh.} ||
 
-`+A955+`1_{Be-} 2_{sok} 3...{kejahatan dunia akan di-} (2_ 1_){le-} 2{bur,} |
-4...{dan Penyelamat dunia akan merajai} (3_ 4_){ki-} 5{ta.} ||
+
+== Alleluya 955
+do = es, 2/2
+tempo = 84
+[refren]
+[C]5{Al-} . [Am](6 5){le-} | [Dm](4 3){lu-} 2{ya,} 0 | [G]4{al-} . (5 4){le-} | [C](3 2){lu-} [Am]1{ya,} 3{al-} | [Dm]2{le-} . [G](1 7<){lu-} | [C]1{ya.} . ||
+[ayat]
+1_{Be-} 2_{sok} [C]3...{kejahatan dunia akan di-} (2_ 1_){le-} [Dm]2{bur,} |
+[F]4...{dan Penyelamat dunia akan merajai} (3_ 4_){ki-} [G]5{ta.} ||
 `},
 {id:"2026-12-24-malam",date:"24 Desember 2026",label:"Malam Natal",src:`== Mazmur Tanggapan · Refren 006
 do = d, 4/4
 tempo = 72
 [refren]
-5_{Ha-} 5_{ri} | 5_{i-} 5_{ni} ._ 5_{t’lah} 6_{la-} 7_{hir} 1>_{ba-} 6_{gi} | 5_{ki-} 3_{ta} ._ 1_{se-} 6_{o-} 6_{rang} 1>:1/3{Ju-} 7:1/3{ru-} 6:1/3{se-} | 5{la-} 3{mat} ._ 1_{ya-}
-2_{i-} 3_{tu} | (4_ 5_){Kris-} (6_ 7_){tus} | 1>{Tu-} 1>{han.} . ||
+[G]5_{Ha-} 5_{ri} | [C]5_{i-} 5_{ni} ._ 5_{t’lah} [F]6_{la-} 7_{hir} 1>_{ba-} 6_{gi} | [C]5_{ki-} 3_{ta} ._ 1_{se-} [F]6_{o-} 6_{rang} 1>:1/3{Ju-} 7:1/3{ru-} 6:1/3{se-} | [C]5{la-} 3{mat} [Am]._ 1_{ya-}
+2_{i-} 3_{tu} | [F](4_ 5_){Kris-} [G](6_ 7_){tus} | [C]1>{Tu-} 1>{han.} . ||
 [ayat 1]
-1_{Nya-} 3_{nyi-} 4_{kan-} 5...{lah lagu baru bagi} 6{Tu-} 5{han,} '
-6_{me-} 7_{nya-} 1>_{nyi-} 5...{lah bagi Tuhan, hai se-} 3_{lu-} 4_{ruh} 5{bu-} 5{mi!} |
-1_{Me-} 3_{nya-} 4_{nyi-} 5...{lah bagi} 6{Tu-} 5{han,} '
-6_{pu-} 6_{ji-} 4_{lah} 3_{na-} 2{ma-} 1{Nya.} ||
+1_{Nya-} 3_{nyi-} 4_{kan-} [C]5...{lah lagu baru bagi} [F]6{Tu-} [G]5{han,} '
+6_{me-} 7_{nya-} 1>_{nyi-} [C]5...{lah bagi Tuhan, hai se-} 3_{lu-} 4_{ruh} [G]5{bu-} 5{mi!} |
+1_{Me-} 3_{nya-} 4_{nyi-} [C]5...{lah bagi} [F]6{Tu-} [G]5{han,} '
+[Dm]6_{pu-} 6_{ji-} 4_{lah} 3_{na-} [G]2{ma-} [C]1{Nya.} ||
 [ayat 2]
-1_{Ka-} 3_{bar-} 4_{kan-} 5...{lah dari hari ke} 6{ha-} 5{ri} '
-6_{ke-} 6_{se-} 7_{la-} 1>_{ma-} 5...{tan yang datang dari} 3_{pa-} 4_{da-} 5{Nya.} |
-1_{Ce-} 1_{ri-} 3_{ta-} 4_{kan-} 5...{lah kemuliaan-Nya di antara bangsa-} 6{bang-} 5{sa,} '
-6...{kisahkanlah karya-karya-Nya yang ajaib} ' 6...{di antara segala} 4_{su-} 3_{ku} 2{bang-} 1{sa.} ||
+1_{Ka-} 3_{bar-} 4_{kan-} [C]5...{lah dari hari ke} [F]6{ha-} [G]5{ri} '
+6_{ke-} 6_{se-} 7_{la-} 1>_{ma-} [C]5...{tan yang datang dari} 3_{pa-} 4_{da-} [G]5{Nya.} |
+1_{Ce-} 1_{ri-} 3_{ta-} 4_{kan-} [C]5...{lah kemuliaan-Nya di antara bangsa-} [F]6{bang-} [G]5{sa,} '
+[Dm]6...{kisahkanlah karya-karya-Nya yang ajaib} ' 6...{di antara segala} 4_{su-} 3_{ku} [G]2{bang-} [C]1{sa.} ||
 [ayat 3]
-1_{Bi-} 3_{ar-} 4_{lah} 5...{langit bersukacita dan bumi bersorak-} 6{so-} 5{rai,} '
-6_{bi-} 7_{ar} 1>_{ge-} 5...{muruhlah laut serta segala} 3_{i-} 4_{si-} 5{nya!} |
-1_{Bi-} 3_{ar-} 4_{lah} 5...{beria-ria padang dan segala yang ada di a-} 6{tas-} 5{nya,} '
-6...{dan segala pohon di hutan ber-} 4_{so-} 3_{rak-} 2{so-} 1{rai.} ||
+1_{Bi-} 3_{ar-} 4_{lah} [C]5...{langit bersukacita dan bumi bersorak-} [F]6{so-} [G]5{rai,} '
+6_{bi-} 7_{ar} 1>_{ge-} [C]5...{muruhlah laut serta segala} 3_{i-} 4_{si-} [G]5{nya!} |
+1_{Bi-} 3_{ar-} 4_{lah} [C]5...{beria-ria padang dan segala yang ada di a-} [F]6{tas-} [G]5{nya,} '
+[Dm]6...{dan segala pohon di hutan ber-} 4_{so-} 3_{rak-} [G]2{so-} [C]1{rai.} ||
 [ayat 4]
-1_{Bi-} 3_{ar-} 4_{lah} 5...{mereka bersorak-sorai di hadapan} 6{Tu-} 5{han,} '
-6_{se-} 7_{bab} 1>_{I-} 5...{a datang untuk mengha-} 3_{kim-} 4_{i} 5{bu-} 5{mi.} |
-1_{I-} 3_{a} 4_{a-} 5...{kan menghakimi dunia dengan kea-} 6{dil-} 5{an,} '
-6...{dan bangsa-bangsa dengan kese-} 4_{ti-} 3_{a-} 2{an-} 1{Nya.} ||
+1_{Bi-} 3_{ar-} 4_{lah} [C]5...{mereka bersorak-sorai di hadapan} [F]6{Tu-} [G]5{han,} '
+6_{se-} 7_{bab} 1>_{I-} [C]5...{a datang untuk mengha-} 3_{kim-} 4_{i} [G]5{bu-} 5{mi.} |
+1_{I-} 3_{a} 4_{a-} [C]5...{kan menghakimi dunia dengan kea-} [F]6{dil-} [G]5{an,} '
+[Dm]6...{dan bangsa-bangsa dengan kese-} 4_{ti-} 3_{a-} [G]2{an-} [C]1{Nya.} ||
 
-`+A953+`5...{Aku memberitakan kepadamu kesukaan} (3_ 4_){be-} 5{sar:} |
-6...{Hari ini telah lahir bagimu Juruselamat, yaitu} 5_{Kris-} 4_{tus} 5{Tu-} 5{han.} ||
+
+== Alleluya 953
+do = d, 2/2
+tempo = 84
+[refren]
+[C](3 2){Al-} | [C]3{le-} 2 [Am]1 3 | [Em]5{lu-} 6 [G]5{ya,} . | [F]6{al-} 1>{le-} [Dm]1>{lu-} 7 | [G]5{ya.} . ||
+[ayat]
+[C]5...{Aku memberitakan kepadamu kesukaan} (3_ 4_){be-} [G]5{sar:} |
+[F]6...{Hari ini telah lahir bagimu Juruselamat, yaitu} 5_{Kris-} 4_{tus} [G]5{Tu-} 5{han.} ||
 `},
 {id:"2026-12-25-fajar",date:"25 Desember 2026",label:"Hari Raya Natal, Fajar",src:`== Mazmur Tanggapan · Refren 007
 do = bes, 4/4
 tempo = 72
 [refren]
-1>{Ha-} 1>{ri} 7{i-} 7_{ni} 5_{ca-} | 6{ha-} 5{ya} (4_ 3_){tu-} 3{run} | (2_ 6_){a-} (1>_ 6_){tas} | 7{ki-} 7{ta,} . 0_ 7_{se-} |
-1>{bab} . 2>{Tu-} (1>_ 2>_){han} | 3>{la-} . 1>{hir} 6_{ba-} 1>_{gi} | (2> ._ 1>_){ki-} 1>{ta.} . ||
+[C]1>{Ha-} 1>{ri} [G]7{i-} 7_{ni} 5_{ca-} | [Am]6{ha-} 5{ya} (4_ 3_){tu-} 3{run} | [Dm](2_ 6_){a-} (1>_ 6_){tas} | [G]7{ki-} 7{ta,} . 0_ 7_{se-} |
+[C]1>{bab} . [G]2>{Tu-} (1>_ 2>_){han} | [C]3>{la-} . 1>{hir} [F]6_{ba-} 1>_{gi} | [G](2> ._ 1>_){ki-} [C]1>{ta.} . ||
 [ayat 1]
-1>_{Tu-} 1>...{han adalah Raja, biarlah bumi bersorak-} (6_ 7_){so-} 1>{rai,} '
-6_{bi-} 6...{ar-lah banyak pulau ber-} 1>_{su-} 7_{ka-} 6{ci-} 5{ta!} |
-1>_{La-} 1>...{ngit memberitakan ke-} 6_{a-} 7_{dil-} 1>{an-} 1>{Nya,} '
-5...{dan segala bangsa melihat ke-} 6_{mu-} 1>_{lia-} 2>{an-} 1>{Nya.} ||
+1>_{Tu-} [C]1>...{han adalah Raja, biarlah bumi bersorak-} (6_ 7_){so-} [Am]1>{rai,} '
+6_{bi-} [F]6...{ar-lah banyak pulau ber-} 1>_{su-} 7_{ka-} 6{ci-} [G]5{ta!} |
+1>_{La-} [C]1>...{ngit memberitakan ke-} 6_{a-} 7_{dil-} [Am]1>{an-} 1>{Nya,} '
+[G]5...{dan segala bangsa melihat ke-} 6_{mu-} 1>_{lia-} 2>{an-} [C]1>{Nya.} ||
 [ayat 2]
-1>_{Te-} 1>...{rang sudah terbit bagi orang} (6_ 7_){be-} 1>{nar,} '
-6_{dan} 6...{suka-cita bagi orang-orang yang} 1>_{tu-} 7_{lus} 6{ha-} 5{ti.} |
-1>_{Ber-} 1>...{sukacitalah karena Tuhan, hai orang-} 6_{o-} 7_{rang} 1>{be-} 1>{nar,} '
-5...{dan nyanyikanlah syukur bagi nama-} 6_{Nya} 1>_{yang} 2>{ku-} 1>{dus.} ||
+1>_{Te-} [C]1>...{rang sudah terbit bagi orang} (6_ 7_){be-} [Am]1>{nar,} '
+6_{dan} [F]6...{suka-cita bagi orang-orang yang} 1>_{tu-} 7_{lus} 6{ha-} [G]5{ti.} |
+1>_{Ber-} [C]1>...{sukacitalah karena Tuhan, hai orang-} 6_{o-} 7_{rang} [Am]1>{be-} 1>{nar,} '
+[G]5...{dan nyanyikanlah syukur bagi nama-} 6_{Nya} 1>_{yang} 2>{ku-} [C]1>{dus.} ||
 
-`+A953+`5...{Kemuliaan bagi Allah di tempat yang} 3_{ma-} 4_{ha-} 5{ting-} 5{gi,} |
-6...{dan damai sejahtera di bumi bagi orang yang berkenan} 5_{ke-} 4_{pa-} 5{da-} 5{Nya.} ||
+`+A953+`[C]5...{Kemuliaan bagi Allah di tempat yang} 3_{ma-} 4_{ha-} [G]5{ting-} 5{gi,} |
+[F]6...{dan damai sejahtera di bumi bagi orang yang berkenan} 5_{ke-} 4_{pa-} [G]5{da-} 5{Nya.} ||
 `},
 {id:"2026-12-25-siang",date:"25 Desember 2026",label:"Hari Raya Natal, Siang",src:`== Mazmur Tanggapan · Refren 008
 do = c, 4/4
 tempo = 72
 [refren]
-1{Se-} | 5{ga-} 3{la} 1{u-} 5{jung} | 6{bu-} . 5{mi} 5_{t’lah} 5_{me-} | 6{li-} 7{hat} 1>{ke-} 7_{se-} 7_{la-} | 6{mat-} . 5{an} (6_ 7_){yang} | 1>{da-} . 5{tang} . |
-6{da-} 5{ri} 4{Al-} 3{lah} | 2{ki-} . 1{ta.} ||
+1{Se-} | [C]5{ga-} 3{la} 1{u-} 5{jung} | [F]6{bu-} . [C]5{mi} 5_{t’lah} 5_{me-} | [F]6{li-} 7{hat} [Am]1>{ke-} 7_{se-} 7_{la-} | [D]6{mat-} . [G]5{an} (6_ 7_){yang} | [C]1>{da-} . 5{tang} . |
+[F]6{da-} 5{ri} [Dm]4{Al-} 3{lah} | [G]2{ki-} . [C]1{ta.} ||
 [ayat 1]
-1_{Nya-} 3_{nyi-} 4_{kan-} 5...{lah lagu baru bagi} 6{Tu-} 5{han,} '
-6_{se-} 7_{bab} 1>_{I-} 5...{a telah melakukan karya-karya} 3_{yang} 4_{a-} 5{ja-} 5{ib;} |
-1_{ke-} 1_{se-} 3_{la-} 4_{ma-} 5...{tan telah dikerjakan oleh tangan ka-} 6_{nan-} 5{Nya,} '
-6...{oleh lengan-} 4_{Nya} 3_{yang} 2{ku-} 1{dus.} ||
+1_{Nya-} 3_{nyi-} 4_{kan-} [C]5...{lah lagu baru bagi} [F]6{Tu-} [G]5{han,} '
+6_{se-} 7_{bab} 1>_{I-} [C]5...{a telah melakukan karya-karya} 3_{yang} 4_{a-} [G]5{ja-} 5{ib;} |
+1_{ke-} 1_{se-} 3_{la-} 4_{ma-} [C]5...{tan telah dikerjakan oleh tangan ka-} [F]6_{nan-} [G]5{Nya,} '
+[F]6...{oleh lengan-} 4_{Nya} 3_{yang} [G]2{ku-} [C]1{dus.} ||
 [ayat 2]
-1_{Tu-} 3_{han} 4_{te-} 5...{lah memperkenalkan keselamatan yang datang dari pa-} 6_{da-} 5{Nya,} '
-6_{I-} 7_{a} 1>_{te-} 5...{lah menyatakan keadilan-Nya di hadapan} 3_{pa-} 4_{ra} 5{bang-} 5{sa.} |
-1_{I-} 1_{a} 3_{i-} 4_{ngat} 5...{akan kasih dan kesetia-} 6_{an-} 5{Nya} '
-6...{terhadap ka-} 4_{um} 3_{I-} 2{sra-} 1{el.} ||
+1_{Tu-} 3_{han} 4_{te-} [C]5...{lah memperkenalkan keselamatan yang datang dari pa-} [F]6_{da-} [G]5{Nya,} '
+6_{I-} 7_{a} 1>_{te-} [C]5...{lah menyatakan keadilan-Nya di hadapan} 3_{pa-} 4_{ra} [G]5{bang-} 5{sa.} |
+1_{I-} 1_{a} 3_{i-} 4_{ngat} [C]5...{akan kasih dan kesetia-} [F]6_{an-} [G]5{Nya} '
+[F]6...{terhadap ka-} 4_{um} 3_{I-} [G]2{sra-} [C]1{el.} ||
 [ayat 3]
-1_{Se-} 3_{ga-} 4_{la} 5...{ujung bumi telah melihat kesela-} 6{mat-} 5{an} '
-6_{yang} (7_ 1>_){da-} 5...{tang dari} 3_{Al-} 4_{lah} 5{ki-} 5{ta.} |
-1_{Ber-} 3_{so-} 4_{rak-} 5...{sorailah bagi Tuhan, hai seluruh} 6_{bu-} 5{mi,} '
-6...{bergembiralah dan} 4_{ber-} 3_{maz-} 2{mur-} 1{lah.} ||
+1_{Se-} 3_{ga-} 4_{la} [C]5...{ujung bumi telah melihat kesela-} [F]6{mat-} [G]5{an} '
+6_{yang} (7_ 1>_){da-} [C]5...{tang dari} 3_{Al-} 4_{lah} [G]5{ki-} 5{ta.} |
+1_{Ber-} 3_{so-} 4_{rak-} [C]5...{sorailah bagi Tuhan, hai seluruh} [F]6_{bu-} [G]5{mi,} '
+[F]6...{bergembiralah dan} 4_{ber-} 3_{maz-} [G]2{mur-} [C]1{lah.} ||
 [ayat 4]
-1_{Ber-} 3_{maz-} 4_{mur-} 5...{lah bagi Tuhan dengan ke-} 6{ca-} 5{pi,} '
-6_{de-} 7_{ngan} 1>_{ke-} 5...{capi dan} 3_{la-} 4_{gu} 5{mer-} 5{du;} |
-1_{de-} 3_{ngan} 4_{na-} 5...{firi dan sangkakala yang} 6_{nya-} 5{ring} '
-6...{bersorak-sorailah di hadapan Raja,} 4_{yak-} 3_{ni} 2{Tu-} 1{han.} ||
+1_{Ber-} 3_{maz-} 4_{mur-} [C]5...{lah bagi Tuhan dengan ke-} [F]6{ca-} [G]5{pi,} '
+6_{de-} 7_{ngan} 1>_{ke-} [C]5...{capi dan} 3_{la-} 4_{gu} [G]5{mer-} 5{du;} |
+1_{de-} 3_{ngan} 4_{na-} [C]5...{firi dan sangkakala yang} [F]6_{nya-} [G]5{ring} '
+[F]6...{bersorak-sorailah di hadapan Raja,} 4_{yak-} 3_{ni} [G]2{Tu-} [C]1{han.} ||
 
-`+A951+`5...{Fajar suci menyinari kita,} ' 5...{marilah menyembah Tuhan, hai semu-} 4_{a} (3_ 2_){bang-} 3{sa,} |
-3...{sebab cahaya gemilang telah turun ke} (4_ 3_){du-} 2{nia.} ||
+`+A951+`[C]5...{Fajar suci menyinari kita,} ' 5...{marilah menyembah Tuhan, hai semu-} 4_{a} (3_ 2_){bang-} [Am]3{sa,} |
+[Am]3...{sebab cahaya gemilang telah turun ke} (4_ 3_){du-} [G]2{nia.} ||
 `},
 {id:"2026-12-26",date:"26 Desember 2026",label:"Pesta St. Stefanus, Martir"},
 {id:"2026-12-27",date:"27 Desember 2026",label:"Pesta Keluarga Kudus: Yesus, Maria, Yusuf",src:`== Mazmur Tanggapan · Refren 077
 do = d, 4/4
 tempo = 72
 [refren]
-3_{Ha-} 4_{nya} 5_{Di-} 6_{a-} 5{lah} 1>{Tu-} | 7{han,} 7_{Al-} 6_{lah} (7_ 6_){ki-} 5_{ta,} .= 5={se-} | 6_{la-} 5_{ma-} 4_{la-} 3_{ma-} | 2{nya}
-3_{I-} 4_{a} | 5{i-} 5{ngat} 6_{a-} 5_{kan} 5_{per-} 4_{jan-} | 3{ji-} 2{an-} 3{Nya.} . ||
+[C]3_{Ha-} 4_{nya} 5_{Di-} 6_{a-} 5{lah} 1>{Tu-} | [G]7{han,} 7_{Al-} 6_{lah} (7_ 6_){ki-} 5_{ta,} .= 5={se-} | [Dm]6_{la-} 5_{ma-} 4_{la-} 3_{ma-} | [G]2{nya}
+3_{I-} 4_{a} | [C]5{i-} 5{ngat} [F]6_{a-} 5_{kan} 5_{per-} 4_{jan-} | [G]3{ji-} 2{an-} [C]3{Nya.} . ||
 [ayat 1]
-3_{Ber-} 4_{syu-} 5...{kurlah kepada Tuhan, serukanlah na-} 6{ma-} 5{Nya,} '
-1>_{mak-} 7...{lumkanlah perbuatan-Nya di antara bangsa-} (6_ 5_){bang-} 5{sa.} |
-3_{Ber-} 4_{nya-} 5...{nyilah bagi Tuhan, bermazmurlah ba-} 6{gi-} 5{Nya,} '
-6...{Percakapkanlah segala perbuatan-} 5_{Nya} 4_{yang} 3_{a-} 2{ja-} 3{ib.} ||
+3_{Ber-} 4_{syu-} [C]5...{kurlah kepada Tuhan, serukanlah na-} 6{ma-} [Em]5{Nya,} '
+1>_{mak-} [G]7...{lumkanlah perbuatan-Nya di antara bangsa-} (6_ 5_){bang-} [C]5{sa.} |
+3_{Ber-} 4_{nya-} [C]5...{nyilah bagi Tuhan, bermazmurlah ba-} 6{gi-} [Em]5{Nya,} '
+[F]6...{Percakapkanlah segala perbuatan-} 5_{Nya} 4_{yang} [G]3_{a-} 2{ja-} [C]3{ib.} ||
 [ayat 2]
-3_{Ber-} 4_{me-} 5...{gahlah dalam nama-Nya yang} 6{ku-} 5{dus} '
-1>_{bi-} 7...{arlah bersuka hati orang-orang yang mencari} (6_ 5_){Tu-} 5{han.} |
-3_{Ca-} 4_{ri-} 5...{lah Tuhan dan kekuat-} 6{an-} 5{Nya} '
-6...{carilah sela-} 5_{lu} 4_{wa-} (3_ 2_){jah-} 3{Nya.} ||
+3_{Ber-} 4_{me-} [C]5...{gahlah dalam nama-Nya yang} 6{ku-} [Em]5{dus} '
+1>_{bi-} [G]7...{arlah bersuka hati orang-orang yang mencari} (6_ 5_){Tu-} [C]5{han.} |
+3_{Ca-} 4_{ri-} [C]5...{lah Tuhan dan kekuat-} 6{an-} [Em]5{Nya} '
+[F]6...{carilah sela-} 5_{lu} 4_{wa-} [G](3_ 2_){jah-} [C]3{Nya.} ||
 [ayat 3]
-3_{I-} 4_{ngat-} 5...{lah perbuatan ajaib yang dilaku-} 6{kan-} 5{Nya,} '
-1>_{muk-} 7...{jizat dan ketetapan yang diucap-} (6_ 5_){kan-} 5{Nya,} |
-3_{hai} 4_{a-} 5...{nak cucu Abraham, ham-} 6{ba-} 5{Nya.} '
-6...{hai anak-anak Yakub,} 5_{pi-} 4_{lih-} (3_ 2_){an-} 3{Nya.} ||
+3_{I-} 4_{ngat-} [C]5...{lah perbuatan ajaib yang dilaku-} 6{kan-} [Em]5{Nya,} '
+1>_{muk-} [G]7...{jizat dan ketetapan yang diucap-} (6_ 5_){kan-} [C]5{Nya,} |
+3_{hai} 4_{a-} [C]5...{nak cucu Abraham, ham-} 6{ba-} [Em]5{Nya.} '
+[F]6...{hai anak-anak Yakub,} 5_{pi-} 4_{lih-} [G](3_ 2_){an-} [C]3{Nya.} ||
 [ayat 4]
-3_{Se-} 4_{la-} 5...{ma-lamanya Ia ingat akan perjanji-} 6{an-} 5{Nya} '
-1>_{a-} 7...{kan firman yang diperintahkan-Nya kepada seribu ang-} (6_ 5_){kat-} 5{an,} |
-3_{a-} 4_{kan} 5...{perjanjian yang diikat-Nya dengan A-} 6{bra-} 5{ham} '
-6...{dan akan sumpah-Nya ke-} 5{pa-} 4{da} (3_ 2_){Is-} 3{hak.} ||
+3_{Se-} 4_{la-} [C]5...{ma-lamanya Ia ingat akan perjanji-} 6{an-} [Em]5{Nya} '
+1>_{a-} [G]7...{kan firman yang diperintahkan-Nya kepada seribu ang-} (6_ 5_){kat-} [C]5{an,} |
+3_{a-} 4_{kan} [C]5...{perjanjian yang diikat-Nya dengan A-} 6{bra-} [Em]5{ham} '
+[F]6...{dan akan sumpah-Nya ke-} 5{pa-} 4{da} [G](3_ 2_){Is-} [C]3{hak.} ||
 
-`+A951+`5...{Dahulu kala Allah berbicara kepada nenek moyang kita,} ' 5...{dengan perantaraan pa-} 4_{ra} (3_ 2_){na-} 3{bi,} |
-3...{pada zaman akhir ini Ia berbicara kepada kita,} ' 3...{dengan perantaraan A-} (4_ 3_){nak-} 2{Nya.} ||
+`+A951+`[C]5...{Dahulu kala Allah berbicara kepada nenek moyang kita,} ' 5...{dengan perantaraan pa-} 4_{ra} (3_ 2_){na-} [Am]3{bi,} |
+[Am]3...{pada zaman akhir ini Ia berbicara kepada kita,} ' 3...{dengan perantaraan A-} [Dm](4_ 3_){nak-} [G]2{Nya.} ||
 `}
 ];
 
@@ -463,8 +621,9 @@ function sylWord(w){
     else cut=s-1;cuts.push(cut)}
   const out=[];let p=0;for(const c of cuts){out.push(w.slice(p,c));p=c}out.push(w.slice(p));return out}
 function splitText(text){ /* -> pieces [{syl:true,v}|{syl:false,v}] */
-  const out=[];const re=/([A-Za-zÀ-ÿ]+)|([^A-Za-zÀ-ÿ]+)/g;let m;
-  while((m=re.exec(text))){if(m[1]){sylWord(m[1]).forEach(v=>out.push({syl:true,v}))}else out.push({syl:false,v:m[2]})}
+  const out=[];const re=/\[([^\]]+)\]|([A-Za-zÀ-ÿ]+)|([^A-Za-zÀ-ÿ\[]+)/g;let m,pch=null;
+  while((m=re.exec(text))){if(m[1]){pch=m[1].trim();continue}
+    if(m[2]){sylWord(m[2]).forEach(v=>{const p={syl:true,v};if(pch){p.chr=pch;pch=null}out.push(p)})}else out.push({syl:false,v:m[3]})}
   return out}
 
 /* ---------- parser ---------- */
@@ -475,20 +634,23 @@ const NOTE=/^([#b]?)([0-7])(>{1,2}|<{1,2})?/;
 function parseNote(tok){const m=tok.match(NOTE);if(!m)return null;
   return {acc:m[1]==='#'?1:m[1]==='b'?-1:0,deg:+m[2],oct:m[3]?(m[3][0]==='>'?1:-1)*m[3].length:0,rest:tok.slice(m[0].length)}}
 function parseLine(line,warn,ln){
-  const items=[];const re=/\(([^)]*)\)\s*(?:\{([^}]*)\})?|([#b]?[0-7](?:>{1,2}|<{1,2})?)(\.\.\.|…)?((?:_|=|:\d+(?:\.\d+)?(?:\/\d+)?)?)\s*(?:\{([^}]*)\})?|(\.)((?:_|=|:\d+(?:\.\d+)?(?:\/\d+)?)?)|(\|\||\||'|’)|(\S+)/g;let m;
+  const items=[];const re=/\(([^)]*)\)\s*(?:\{([^}]*)\})?|([#b]?[0-7](?:>{1,2}|<{1,2})?)(\.\.\.|…)?((?:_|=|:\d+(?:\.\d+)?(?:\/\d+)?)?)\s*(?:\{([^}]*)\})?|(\.)((?:_|=|:\d+(?:\.\d+)?(?:\/\d+)?)?)|(\|\||\||'|’)|\[([^\]]+)\]|(\S+)/g;let m,pch=null;
+  const mkch=r=>{r=r.trim();const opt=/^\(.*\)$/.test(r);return {raw:opt?r.slice(1,-1).trim():r,opt,id:'e'+(++UID)}};
+  const push=it=>{if(pch){it.ch=pch;pch=null}items.push(it)};
   while((m=re.exec(line))){
     if(m[1]!==undefined){const notes=[];for(const t of m[1].trim().split(/\s+/)){if(!t)continue;
         if(/^\.(_|=|:.*)?$/.test(t)){notes.push({tie:1,d:durOf(t.slice(1)),id:'e'+(++UID)});continue}
         const n=parseNote(t);if(!n){warn.push(`Baris ${ln}: “${t}” dalam kurung tidak dikenal`);continue}
         notes.push({...n,d:durOf(n.rest),id:'e'+(++UID)})}
-      items.push({k:'note',notes,syl:m[2]!=null?{t:m[2],id:'e'+(++UID)}:null})}
+      push({k:'note',notes,syl:m[2]!=null?{t:m[2],id:'e'+(++UID)}:null})}
     else if(m[3]){const n=parseNote(m[3]);
-      if(m[4]){items.push({k:'rec',...n,id:'e'+(++UID),pieces:splitText(m[6]||'').map(p=>p.syl?{...p,id:'e'+(++UID)}:p)});
+      if(m[4]){push({k:'rec',...n,id:'e'+(++UID),pieces:splitText(m[6]||'').map(p=>p.syl?{...p,id:'e'+(++UID),ch:p.chr?mkch(p.chr):null}:p)});
         if(!m[6])warn.push(`Baris ${ln}: resitasi ${m[3]}... tanpa teks {…}`)}
-      else items.push({k:'note',notes:[{...n,d:durOf(m[5]),id:'e'+(++UID)}],syl:m[6]!=null?{t:m[6],id:'e'+(++UID)}:null})}
-    else if(m[7])items.push({k:'tie',d:durOf(m[8]),id:'e'+(++UID)});
+      else push({k:'note',notes:[{...n,d:durOf(m[5]),id:'e'+(++UID)}],syl:m[6]!=null?{t:m[6],id:'e'+(++UID)}:null})}
+    else if(m[7])push({k:'tie',d:durOf(m[8]),id:'e'+(++UID)});
     else if(m[9])items.push({k:m[9]==='||'?'end':m[9]==='|'?'bar':'br'});
-    else if(m[10])warn.push(`Baris ${ln}: “${m[10]}” dilewati`);
+    else if(m[10])pch=mkch(m[10]);
+    else if(m[11])warn.push(`Baris ${ln}: “${m[11]}” dilewati`);
   }
   return items}
 function parse(src){
@@ -503,10 +665,27 @@ function parse(src){
     if((m=line.match(/^\[\s*(refren|ref|ayat|verse|bait)\s*(\d*)\s*\]$/i))){const ay=!/^ref/i.test(m[1]);
       sec={ay,n:m[2]||'',lines:[]};song.secs.push(sec);return}
     if(!sec){sec={ay:false,n:'',lines:[]};song.secs.push(sec)}
-    const items=parseLine(line,warn,ln);if(items.length)sec.lines.push(items)});
+    const items=parseLine(line,warn,ln);if(items.length){sec.lines.push(items);if(items.some(it=>it.ch||(it.pieces&&it.pieces.some(p=>p.ch)))){sec.hasCh=true;song.hasCh=true}}});
   songs.forEach(s=>{if(!s.tempo)s.tempo=s.den===2?84:72;s.secs=s.secs.filter(x=>x.lines.length)});
   return {songs:songs.filter(s=>s.secs.length),warn}}
 
+/* ---------- chords (written relative to do = C) ---------- */
+const SH=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],FL=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+const NPC={c:0,d:2,e:4,f:5,g:7,a:9,b:11,h:11};
+function pcOf(n){const m=String(n).match(/^([A-Ha-h])([#b♯♭]?)/);if(!m)return null;let p=NPC[m[1].toLowerCase()];if(m[2]==='#'||m[2]==='♯')p++;if(m[2]==='b'||m[2]==='♭')p--;return (p+12)%12}
+function parseChord(raw){const m=raw.match(/^([A-Ha-h][#b♯♭]?)([^/]*)(?:\/([A-Ha-h][#b♯♭]?))?$/);if(!m)return null;return {root:pcOf(m[1]),q:m[2]||'',bass:m[3]?pcOf(m[3]):null}}
+function shiftOf(song){return ((keyPc(song.key)+S.trans)%12+12)%12}
+function chName(raw,shift){const c=parseChord(raw);if(!c)return raw;const k=shift;const N=[5,10,3,8,1].includes(k)?FL:SH;
+  return N[(c.root+k)%12]+c.q+(c.bass!=null?'/'+N[(c.bass+k)%12]:'')}
+function chIntervals(q){q=q.toLowerCase();let iv=[0,4,7];
+  if(/dim|°/.test(q))iv=[0,3,6];else if(/aug|\+/.test(q))iv=[0,4,8];else if(/^m(?!aj)/.test(q))iv=[0,3,7];
+  if(/sus2/.test(q))iv=[0,2,7];else if(/sus/.test(q))iv=[0,5,7];
+  if(/maj7|M7|Δ/.test(q))iv.push(11);else if(/dim7/.test(q))iv.push(9);else if(/7/.test(q))iv.push(10);
+  if(/(^|[^d])6/.test(q))iv.push(9);if(/add9|add2/.test(q))iv.push(14);else if(/9/.test(q)){if(!iv.includes(10)&&!iv.includes(11))iv.push(10);iv.push(14)}
+  return iv}
+function chMidis(raw,shift){const c=parseChord(raw);if(!c)return [];const r=(c.root+shift)%12;const b=c.bass!=null?(c.bass+shift)%12:r;
+  const up=[...new Set(chIntervals(c.q).map(i=>52+(((r+i-4)%12)+12)%12))].sort((a,b)=>a-b);return [40+((b-4+12)%12),...up]}
+function chHTML(ch,shift){return ch?`<span class="chd" id="${ch.id}">${esc(ch.opt?'('+chName(ch.raw,shift)+')':chName(ch.raw,shift))}</span>`:'<span class="chd"></span>'}
 /* ---------- rendering ---------- */
 function numHTML(n){if(n.tie)return `<i id="${n.id}" class="${n.d<1?(n.d<.5?'b2':'b1'):''}">·</i>`;
   const cls=[n.d<1&&n.d>0?(n.d<=.25?'b2':'b1'):'',n.oct>0?'u'+n.oct:'',n.oct<0?'d'+(-n.oct):''].join(' ');
@@ -516,16 +695,17 @@ function render(){
   const song=S.songs[cur];document.body.classList.toggle('empty',!song);$('#hero').hidden=!!song;if(!song){$('#score').innerHTML='';$('#songT').textContent='';$('#warns').innerHTML='';return}
   $('#songT').textContent=song.title;
   $('#meta').textContent=`Tertulis: do = ${KN[keyPc(song.key)]}, ${song.num}/${song.den} · ${song.secs.filter(s=>s.ay).length} ayat`;
-  $('#score').innerHTML=song.secs.map((s,si)=>`<section class="sec ${s.ay?'vl':''}" id="sec${si}" data-s="${si}">
+  const sh=shiftOf(song);$('#chCtl').hidden=!song.hasCh;
+  $('#score').innerHTML=song.secs.map((s,si)=>{const CH=it=>s.hasCh?chHTML(it.ch,sh):'';return `<section class="sec ${s.ay?'vl':''}" id="sec${si}" data-s="${si}">
     <h3><button data-ps="${si}" aria-label="Putar ${secName(s)}">▶</button>${esc(secName(s))}<span>${s.ay?'gaya gregorian, irama mengikuti suku kata':'irama terukur'}</span></h3>
     ${s.lines.map((ln,li)=>`<div class="ln ${li===0?'first':''}">${s.ay&&li===0&&s.n?`<span class="vn">${esc(s.n)}.</span>`:''}${ln.map(it=>{
       if(it.k==='bar')return s.ay?'<span class="mk">|</span>':'<span class="bar"></span>';
       if(it.k==='end')return '<span class="mk">‖</span>';
       if(it.k==='br')return '<span class="mk">’</span>';
-      if(it.k==='tie')return `<span class="c" data-j="${it.id}"><span class="n">${numHTML({tie:1,d:it.d,id:it.id})}</span><span class="l"></span></span>`;
-      if(it.k==='rec')return `<span class="c r" data-j="${it.id}"><span class="n"><i id="${it.id}" class="${it.oct>0?'u'+it.oct:it.oct<0?'d'+(-it.oct):''}">${it.acc>0?'♯':it.acc<0?'♭':''}${it.deg}</i><span class="rl">···</span></span><span class="l">${it.pieces.map(p=>p.syl?`<b id="${p.id}" data-j="${p.id}">${esc(p.v)}</b>`:esc(p.v)).join('')}</span></span>`;
-      return `<span class="c" data-j="${it.notes[0]?.id}"><span class="n">${it.notes.map(numHTML).join('')}</span><span class="l">${it.syl?`<b id="${it.syl.id}">${esc(it.syl.t)}</b>`:''}</span></span>`}).join('')}</div>`).join('')}
-  </section>`).join('');
+      if(it.k==='tie')return `<span class="c" data-j="${it.id}">${CH(it)}<span class="n">${numHTML({tie:1,d:it.d,id:it.id})}</span><span class="l"></span></span>`;
+      if(it.k==='rec')return `<span class="c r" data-j="${it.id}">${CH(it)}<span class="n"><i id="${it.id}" class="${it.oct>0?'u'+it.oct:it.oct<0?'d'+(-it.oct):''}">${it.acc>0?'♯':it.acc<0?'♭':''}${it.deg}</i><span class="rl">···</span></span><span class="l">${it.pieces.map(p=>p.syl?`<b id="${p.id}" data-j="${p.id}">${p.ch?`<span class="chi" id="${p.ch.id}">${esc(chName(p.ch.raw,sh))}</span>`:''}${esc(p.v)}</b>`:esc(p.v)).join('')}</span></span>`;
+      return `<span class="c" data-j="${it.notes[0]?.id}">${CH(it)}<span class="n">${it.notes.map(numHTML).join('')}</span><span class="l">${it.syl?`<b id="${it.syl.id}">${esc(it.syl.t)}</b>`:''}</span></span>`}).join('')}</div>`).join('')}
+  </section>`}).join('');
   renderChips();updKey()}
 function renderTabs(){$('#tabs').hidden=S.songs.length<2;$('#pick').textContent=S.songs.length>1?'Ketuk untuk memilih lagu yang ingin dipelajari:':'';$('#tabs').innerHTML=S.songs.map((s,i)=>`<button class="tab" data-song="${i}" aria-pressed="${i===cur}">${esc(s.title)}</button>`).join('')}
 function plans(){const song=S.songs[cur];if(!song)return [];const R=song.secs.map((s,i)=>i).filter(i=>!song.secs[i].ay),A=song.secs.map((s,i)=>i).filter(i=>song.secs[i].ay);
@@ -539,8 +719,8 @@ function renderChips(){const p=plans();if(plan>=p.length)plan=0;
 function midiOf(song,n){const doM=(()=>{let m=60+keyPc(song.key);if(m>66)m-=12;return m})();
   return doM+[0,2,4,5,7,9,11][n.deg-1]+n.acc+12*n.oct+S.trans+12*S.oct}
 function timeline(song,si,fromId){
-  const s=song.secs[si],ay=s.ay,sd=.5*100/S.laju;let t=0,last=null;const notes=[],vis=[],bars=[];
-  for(const ln of s.lines)for(const it of ln){
+  const s=song.secs[si],ay=s.ay,sd=.5*100/S.laju;let t=0,last=null;const notes=[],vis=[],bars=[],chords=[];
+  for(const ln of s.lines)for(const it of ln){if(it.ch)chords.push({t,raw:it.ch.raw,opt:it.ch.opt,id:it.ch.id});
     if(it.k==='note'){const t0=t;for(const n of it.notes){
         if(n.tie){if(last)last.d+=n.d;vis.push({t,d:n.d,id:n.id});t+=n.d;continue}
         if(n.deg>0){last={t,d:n.d,m:midiOf(song,n),id:n.id};notes.push(last)}
@@ -548,7 +728,7 @@ function timeline(song,si,fromId){
       if(it.syl)vis.push({t:t0,d:t-t0,id:it.syl.id,start:it.notes[0]?.id})}
     else if(it.k==='tie'){if(last)last.d+=it.d;vis.push({t,d:it.d,id:it.id});t+=it.d}
     else if(it.k==='rec'){const t0=t,m=midiOf(song,it);const ps=it.pieces;
-      ps.forEach((p,pi)=>{if(!p.syl)return;last={t,d:sd*.9,m,id:p.id,rec:1};notes.push(last);vis.push({t,d:sd,id:p.id});t+=sd;
+      ps.forEach((p,pi)=>{if(!p.syl)return;if(p.ch)chords.push({t,raw:p.ch.raw,opt:p.ch.opt,id:p.ch.id});last={t,d:sd*.9,m,id:p.id,rec:1};notes.push(last);vis.push({t,d:sd,id:p.id});t+=sd;
         let nx=ps[pi+1];if(nx&&!nx.syl){if(/[.!?;:]/.test(nx.v))t+=sd*1.6;else if(/,/.test(nx.v))t+=sd}});
       vis.push({t:t0,d:t-t0,id:it.id})}
     else if(it.k==='bar'){if(ay)t+=1;else bars.push(t)}
@@ -556,64 +736,103 @@ function timeline(song,si,fromId){
   let off=0;if(fromId){const v=vis.find(v=>v.id===fromId||v.start===fromId);if(v)off=v.t}
   return {ay,len:t,bars,off,
     notes:notes.filter(n=>n.t>=off-1e-6).map(n=>({...n,t:n.t-off})),
-    vis:vis.filter(v=>v.t>=off-1e-6).map(v=>({...v,t:v.t-off}))}}
+    vis:vis.filter(v=>v.t>=off-1e-6).map(v=>({...v,t:v.t-off})),
+    chords:(()=>{const a=chords.filter(c=>c.t<=off+1e-6).pop();return [...(a&&a.t<off-1e-6?[{...a,t:0}]:[]),...chords.filter(c=>c.t>=off-1e-6).map(c=>({...c,t:c.t-off}))]})()}}
 
-/* ---------- audio ---------- */
-let ctx=null,master=null,bus=null,raf=0,playing=false,visAll=[],startAt=0,totalSec=0,segs=[];
-function ac(){if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();const comp=ctx.createDynamicsCompressor();master=ctx.createGain();master.connect(comp);comp.connect(ctx.destination)}
-  master.gain.value=(S.vol/100)**1.5;if(ctx.state==='suspended')ctx.resume();return ctx}
+/* ---------- audio: render offline, play as normal audio file (works when Web Audio output is muted) ---------- */
+let ctx=null,bus=null,raf=0,playing=false,visAll=[],startAt=0,totalSec=0,segs=[],cache=null,busy=0;
+const AUD=new Audio();AUD.preload='auto';AUD.setAttribute('playsinline','');
+const SILENT='data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAIlYAAESsAAACABAAZGF0YQAAAAA=';
+const SR=22050;
 const hz=m=>440*2**((m-69)/12);
-function tone(t,d,m,out,kind,vel=1){const f=hz(m),g=ctx.createGain();g.connect(out);const end=t+d;const os=[];
-  const osc=(type,fr,gain)=>{const o=ctx.createOscillator(),gg=ctx.createGain();o.type=type;o.frequency.value=fr;gg.gain.value=gain;o.connect(gg);gg.connect(g);os.push(o);return o};
-  if(kind==='voice'){const lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=Math.min(1400,f*3);lp.Q.value=.8;g.disconnect();g.connect(lp);lp.connect(out);
-    const a=osc('sawtooth',f,.5),b=osc('sawtooth',f*1.004,.35);const lfo=ctx.createOscillator(),lg=ctx.createGain();lfo.frequency.value=5.3;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(f*.007,t+.35);lfo.connect(lg);lg.connect(a.frequency);lg.connect(b.frequency);os.push(lfo);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.2*vel,t+.06);g.gain.setValueAtTime(.2*vel,Math.max(t+.06,end-.06));g.gain.linearRampToValueAtTime(0,end+.04)}
-  else if(kind==='organ'){osc('sine',f,.6);osc('sine',f*2,.22);osc('sine',f*4,.06);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.3*vel,t+.03);g.gain.setValueAtTime(.3*vel,Math.max(t+.03,end-.04));g.gain.linearRampToValueAtTime(0,end+.03)}
-  else{osc('sine',f,.7);osc('triangle',f*2,.18);osc('sine',f*3,.06);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.42*vel,t+.006);g.gain.setTargetAtTime(.14*vel,t+.006,.28);g.gain.setTargetAtTime(0,end,.07)}
-  os.forEach(o=>{o.start(t);o.stop(end+.5)})}
-function click(t,acc,out){const o=ctx.createOscillator(),g=ctx.createGain();o.type='square';o.frequency.value=acc?1900:1250;
-  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(acc?.25:.14,t+.002);g.gain.exponentialRampToValueAtTime(.0001,t+.045);o.connect(g);g.connect(out);o.start(t);o.stop(t+.06)}
-function droneOn(song,t,end,out){const base=midiOf(song,{deg:1,acc:0,oct:0})-12;[base,base+7].forEach((m,i)=>{const o=ctx.createOscillator(),g=ctx.createGain(),lp=ctx.createBiquadFilter();
-  o.type='triangle';o.frequency.value=hz(m);lp.type='lowpass';lp.frequency.value=600;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(i?.035:.05,t+.8);g.gain.setValueAtTime(i?.035:.05,end-.6);g.gain.linearRampToValueAtTime(0,end);
-  o.connect(lp);lp.connect(g);g.connect(out);o.start(t);o.stop(end+.1)})}
-
-function stop(){playing=false;cancelAnimationFrame(raf);if(bus){const b=bus;b.gain.setTargetAtTime(0,ctx.currentTime,.03);setTimeout(()=>b.disconnect(),400);bus=null}
+/* fast additive synth: notes are collected, then rendered straight into a sample buffer */
+let EV=null,unlocked=false;
+function unlock(){if(unlocked)return;unlocked=true;try{AUD.src=SILENT;const p=AUD.play();if(p)p.catch(()=>{})}catch(e){}}
+function tone(t,d,m,out,kind,vel=1){EV&&EV.push({ty:'n',t,d,m,kind,vel})}
+function click(t,acc,out){EV&&EV.push({ty:'c',t,acc})}
+function droneOn(song,t,end,out){const base=midiOf(song,{deg:1,acc:0,oct:0})-12;[base,base+7].forEach((m,i)=>EV&&EV.push({ty:'d',t,end,m,g:i?.035:.05}))}
+const TN=4096,SIN=new Float32Array(TN+1);for(let i=0;i<=TN;i++)SIN[i]=Math.sin(2*Math.PI*i/TN);
+const PART={piano:[[1,.7],[2,.16],[3,.06],[4,.02]],organ:[[1,.6],[2,.22],[4,.06]],voice:[[1,.5],[2,.25],[3,.15],[4,.1],[5,.07],[6,.05]]};
+function synth(buf,ev){const sr=SR,N=buf.length;
+  if(ev.ty==='c'){const f=ev.acc?1900:1250,a=ev.acc?.25:.14,s0=Math.round(ev.t*sr),n=Math.round(.05*sr);let ph=0;const inc=f/sr;
+    for(let i=0;i<n&&s0+i<N;i++){if(s0+i<0)continue;ph+=inc;const sq=(ph%1)<.5?1:-1;buf[s0+i]+=sq*a*Math.exp(-i/(.012*sr))*.6}return}
+  if(ev.ty==='d'){const f=hz(ev.m),s0=Math.round(ev.t*sr),s1=Math.min(N,Math.round(ev.end*sr)),inc=f*TN/sr;let ph=0;
+    for(let i=Math.max(0,s0);i<s1;i++){const tt=(i-s0)/sr,left=(s1-i)/sr;const env=Math.min(1,tt/.8,left/.6)*ev.g;ph=(ph+inc)%TN;buf[i]+=SIN[ph|0]*env}return}
+  const kind=ev.kind,f=hz(ev.m),P=PART[kind]||PART.piano,v=ev.vel,s0=Math.round(ev.t*sr);
+  const rel=kind==='piano'?.35:kind==='voice'?.06:.05,s1=Math.min(N,Math.round((ev.t+ev.d+rel)*sr)),endT=ev.d;
+  const ph=new Float64Array(P.length),inc=P.map(([h])=>f*h*TN/sr);let amp=0;
+  for(let i=Math.max(0,s0);i<s1;i++){const tt=(i-s0)/sr;let env;
+    if(kind==='piano'){env=tt<.006?tt/.006*.42:.14+(.28)*Math.exp(-(tt-.006)/.28);if(tt>endT)env*=Math.exp(-(tt-endT)/.07);env*=v}
+    else if(kind==='organ'){env=Math.min(1,tt/.03)*.3*v;if(tt>endT)env*=Math.max(0,1-(tt-endT)/.05)}
+    else{env=Math.min(1,tt/.06)*.2*v;if(tt>endT)env*=Math.max(0,1-(tt-endT)/.06)}
+    const vib=kind==='voice'&&tt>.25?1+.007*Math.min(1,(tt-.25)/.1)*SIN[((tt*5.3*TN)%TN)|0]:1;
+    let x=0;for(let k=0;k<P.length;k++){ph[k]+=inc[k]*vib;if(ph[k]>=TN)ph[k]-=TN;x+=SIN[ph[k]|0]*P[k][1]}
+    buf[i]+=x*env}}
+function wav(d){const n=d.length,ab=new ArrayBuffer(44+n*2),v=new DataView(ab);
+  const w=(o,s)=>{for(let i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i))};
+  w(0,'RIFF');v.setUint32(4,36+n*2,true);w(8,'WAVE');w(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);
+  v.setUint32(24,SR,true);v.setUint32(28,SR*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);w(36,'data');v.setUint32(40,n*2,true);
+  for(let i=0;i<n;i++){const x=d[i];v.setInt16(44+i*2,x<0?x*32768:x*32767,true)}
+  return new Blob([ab],{type:'audio/wav'})}
+async function renderAudio(ops,len){EV=[];ops.forEach(f=>f());const ev=EV;EV=null;
+  const buf=new Float32Array(Math.ceil(SR*(len+1)));
+  for(let i=0;i<ev.length;i++){synth(buf,ev[i]);if(i%60===59)await new Promise(r=>setTimeout(r,0))}
+  for(let i=0;i<buf.length;i++){const x=buf[i]*.9;buf[i]=x>1||x<-1?Math.tanh(x):x-(x*x*x)/12}
+  return URL.createObjectURL(wav(buf))}
+function vol(){AUD.volume=Math.min(1,(S.vol/100)**1.5)}
+function stop(){playing=false;cancelAnimationFrame(raf);try{AUD.pause()}catch(e){}
   document.querySelectorAll('.on,.live').forEach(e=>e.classList.remove('on','live'));$('#play').textContent='▶';$('#play').setAttribute('aria-label','Putar');$('#pBar').style.width='0'}
-function play(seq,fromId){stop();ac();const song=S.songs[cur];if(!song)return;bus=ctx.createGain();bus.connect(master);
-  const spb=60/S.tempo,inst=S.inst;let T=ctx.currentTime+.15;visAll=[];segs=[];
+function build(seq,fromId){const song=S.songs[cur];const spb=60/S.tempo,inst=S.inst;let T=.15;const ops=[],vis=[],sg=[];
   seq.forEach((si,k)=>{const tl=timeline(song,si,k===0?fromId:null);
     if(!tl.ay&&S.cin&&k===0&&!fromId){const unit=4/song.den,meter=song.num*unit;const fb=tl.bars.length?tl.bars[0]:0;const L=((fb%meter)+meter)%meter;
       const D=L>0?L-meter:0,first=D-meter;let ct=[];for(let x=first;x<-1e-6;x+=unit)ct.push(x);if(ct.length>song.num&&L===0)ct=ct.slice(-song.num);
-      const lead=-ct[0]*spb;ct.forEach((x,i)=>click(T+lead+x*spb,Math.abs((x-D)%meter)<1e-6||i===0,bus));T+=lead}
+      const lead=-ct[0]*spb,T0=T;ct.forEach((x,i)=>{const acc=Math.abs((x-D)%meter)<1e-6||i===0;ops.push(()=>click(T0+lead+x*spb,acc,bus))});T+=lead}
     const t0=T;
-    tl.notes.forEach(n=>tone(t0+n.t*spb,Math.max(.08,n.d*spb*(n.rec?1:.96)),n.m,bus,inst,n.rec?.85:1));
-    if(!tl.ay&&S.metro){const unit=4/song.den,meter=song.num*unit;const fb=tl.bars.length?tl.bars[0]-tl.off:0;
-      const st=((fb%unit)+unit)%unit;for(let x=st;x<tl.len-tl.off-1e-6;x+=unit){const acc=tl.bars.some(b=>Math.abs(b-tl.off-x)<1e-6)||(x===st&&fb<=0);click(t0+x*spb,acc,bus)}}
+    if(S.mode!=='chord')tl.notes.forEach(n=>ops.push(()=>tone(t0+n.t*spb,Math.max(.08,n.d*spb*(n.rec?1:.96)),n.m,bus,inst,n.rec?.85:1)));
+    if(song.hasCh){const cont=k<seq.length-1,secEnd=tl.len-tl.off,sh=shiftOf(song),cinst=inst==='voice'?'organ':inst,cv=S.chvol/50;
+      const cs=tl.chords.filter(c=>!c.opt||cont);
+      cs.forEach((c,i)=>{const a=c.t,b=i<cs.length-1?cs[i+1].t:secEnd+(cont?.6:.9);
+        vis.push({a:t0+a*spb,b:t0+Math.min(b,secEnd)*spb,id:c.id,el:null,on:false});
+        if(S.mode!=='melody'){const ms=chMidis(c.raw,sh),dur=Math.max(.2,(b-a)*spb-.04);ms.forEach((m,j)=>ops.push(()=>tone(t0+a*spb,dur,m,bus,cinst,(j===0?.56:.32)*cv)))}})}
+    if(!tl.ay&&S.metro){const unit=4/song.den;const fb=tl.bars.length?tl.bars[0]-tl.off:0;
+      const st=((fb%unit)+unit)%unit;for(let x=st;x<tl.len-tl.off-1e-6;x+=unit){const acc=tl.bars.some(b=>Math.abs(b-tl.off-x)<1e-6)||(x===st&&fb<=0);ops.push(()=>click(t0+x*spb,acc,bus))}}
     const segLen=(tl.len-tl.off)*spb;
-    tl.vis.forEach(v=>visAll.push({a:t0+v.t*spb,b:t0+(v.t+v.d)*spb,id:v.id,el:null,on:false}));
-    segs.push({a:t0,b:t0+segLen,si});T=t0+segLen+(k<seq.length-1?1.4*spb+.4:0)});
-  if(S.drone)droneOn(song,ctx.currentTime+.05,T+.6,bus);
-  visAll.forEach(v=>v.el=document.getElementById(v.id));
-  startAt=ctx.currentTime;totalSec=T-startAt;playing=true;$('#play').textContent='■';$('#play').setAttribute('aria-label','Berhenti');
-  const loopSeq=seq,lastSec=-1;let curSeg=-1;
-  const tick=()=>{if(!playing)return;const now=ctx.currentTime;
+    tl.vis.forEach(v=>vis.push({a:t0+v.t*spb,b:t0+(v.t+v.d)*spb,id:v.id,el:null,on:false}));
+    sg.push({a:t0,b:t0+segLen,si});T=t0+segLen+(k<seq.length-1?1.4*spb+.4:0)});
+  if(S.drone){const end=T+.6;ops.push(()=>droneOn(song,.05,end,bus))}
+  return {ops,vis,sg,len:T+.8}}
+function keyOf(seq,fromId){return JSON.stringify([cur,seq,fromId||'',S.tempo,S.laju,S.trans,S.oct,S.inst,S.metro,S.cin,S.drone,S.mode,S.chvol,curEntry&&curEntry.id])}
+async function play(seq,fromId){stop();const song=S.songs[cur];if(!song)return;const key=keyOf(seq,fromId);vol();
+  if(!(cache&&cache.key===key)){
+    unlock();
+    const my=++busy;$('#play').textContent='…';$('#pSub').textContent='Menyiapkan suara…';
+    const p=build(seq,fromId);let url;
+    try{url=await renderAudio(p.ops,p.len)}catch(e){$('#pSub').textContent='Gagal menyiapkan suara.';$('#play').textContent='▶';return}
+    if(my!==busy)return;
+    if(cache)URL.revokeObjectURL(cache.url);cache={key,url,vis:p.vis,sg:p.sg,len:p.len}}
+  visAll=cache.vis.map(v=>({...v,el:document.getElementById(v.id),on:false}));segs=cache.sg;totalSec=cache.len;startAt=0;
+  if(AUD.src!==cache.url){AUD.src=cache.url;AUD.load()}else{try{AUD.currentTime=0}catch(e){}}
+  playing=true;$('#play').textContent='■';$('#play').setAttribute('aria-label','Berhenti');$('#pNow').textContent=song.title;$('#pSub').textContent=secName(song.secs[segs[0].si]);
+  AUD.play().catch(()=>{stop();$('#pSub').textContent='Suara siap — ketuk ▶ sekali lagi.'});
+  const loopSeq=seq;let curSeg=-1;
+  const tick=()=>{if(!playing)return;const now=AUD.currentTime||0;
     for(const v of visAll){const on=now>=v.a&&now<v.b;if(on!==v.on&&v.el){v.on=on;v.el.classList.toggle('on',on);
       if(on&&v.el.tagName!=='I'){const r=v.el.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight-130)v.el.scrollIntoView({block:'center',behavior:'smooth'})}}}
     const sg=segs.findIndex(s=>now>=s.a-.3&&now<s.b+.3);if(sg!==curSeg&&sg>=0){curSeg=sg;document.querySelectorAll('.sec.live').forEach(e=>e.classList.remove('live'));
       const el=$('#sec'+segs[sg].si);el?.classList.add('live');$('#pSub').textContent=secName(song.secs[segs[sg].si])+(segs.length>1?` · ${sg+1}/${segs.length}`:'')}
-    $('#pBar').style.width=Math.min(100,(now-startAt)/totalSec*100)+'%';
-    if(now>startAt+totalSec+.3){if(S.loop&&!fromId){play(loopSeq)}else stop();return}
+    $('#pBar').style.width=Math.min(100,now/totalSec*100)+'%';
+    if(AUD.ended||now>totalSec){if(S.loop&&!fromId){play(loopSeq)}else stop();return}
     raf=requestAnimationFrame(tick)};
-  $('#pNow').textContent=song.title;tick()}
-function cue(){ac();stop();bus=ctx.createGain();bus.connect(master);const song=S.songs[cur];if(!song)return;const t=ctx.currentTime+.1;
-  const p=plans()[plan];const si=p?p.seq[0]:0;const tl=timeline(song,si);const first=tl.notes[0];
-  [1,3,5,8].forEach((d,i)=>tone(t+i*.42,.4,midiOf(song,{deg:d===8?1:d,acc:0,oct:d===8?1:0}),bus,S.inst,.8));
-  if(first)tone(t+4*.42+.25,1.3,first.m,bus,S.inst,1);setTimeout(()=>{if(!playing&&bus){const b=bus;bus=null;setTimeout(()=>b.disconnect(),1500)}},3200)}
+  tick()}
+let cueUrl=null;
+async function cue(){stop();const song=S.songs[cur];if(!song)return;vol();unlock();
+  const p=plans()[plan];const si=p?p.seq[0]:0;const tl=timeline(song,si);const first=tl.notes[0];const inst=S.inst;const ops=[];
+  [1,3,5,8].forEach((d,i)=>{const m=midiOf(song,{deg:d===8?1:d,acc:0,oct:d===8?1:0});ops.push(()=>tone(.1+i*.42,.4,m,bus,inst,.8))});
+  if(first)ops.push(()=>tone(.1+4*.42+.25,1.3,first.m,bus,inst,1));
+  const url=await renderAudio(ops,3.4);if(cueUrl)URL.revokeObjectURL(cueUrl);cueUrl=url;if(cache){URL.revokeObjectURL(cache.url);cache=null}AUD.src=url;AUD.load();AUD.play().catch(()=>{$('#pSub').textContent='Ketuk “Nada awal” sekali lagi.'})}
 
 /* ---------- state & controls ---------- */
-const S={songs:[],trans:store.get('trans',0),oct:store.get('oct',0),tempo:72,laju:store.get('laju',100),inst:store.get('inst','piano'),vol:store.get('vol',80),metro:store.get('metro',false),cin:store.get('cin',true),drone:store.get('drone',false),loop:false};
+const S={songs:[],trans:store.get('trans',0),oct:store.get('oct',0),tempo:72,laju:store.get('laju',100),inst:store.get('inst','piano'),vol:store.get('vol',80),metro:store.get('metro',false),cin:store.get('cin',true),drone:store.get('drone',false),loop:false,mode:store.get('mode','both'),chvol:store.get('chvol2',50)};
 let cur=0,plan=0,srcText='';
 function updKey(){const song=S.songs[cur];if(!song)return;const o=keyPc(song.key),n=(o+S.trans+120)%12;
   $('#kOrig').textContent=`(asli: do = ${KN[o]})`;$('#kNow').textContent=`do = ${KN[n]}${S.trans?` (${S.trans>0?'+':''}${S.trans})`:''}`}
@@ -629,13 +848,15 @@ $('#score').onclick=e=>{const ps=e.target.closest('[data-ps]');if(ps){const si=+
   const j=e.target.closest('[data-j]');const sec=e.target.closest('.sec');if(j&&sec)play([+sec.dataset.s],j.dataset.j)};
 $('#play').onclick=()=>{if(playing)stop();else{const p=plans()[plan];if(p)play(p.seq)}};
 $('#cue').onclick=cue;
-$('#kUp').onclick=()=>{S.trans=Math.min(7,S.trans+1);store.set('trans',S.trans);updKey();if(playing)stop()};
-$('#kDn').onclick=()=>{S.trans=Math.max(-7,S.trans-1);store.set('trans',S.trans);updKey();if(playing)stop()};
+$('#kUp').onclick=()=>{S.trans=Math.min(7,S.trans+1);store.set('trans',S.trans);if(playing)stop();render()};
+$('#kDn').onclick=()=>{S.trans=Math.max(-7,S.trans-1);store.set('trans',S.trans);if(playing)stop();render()};
+$('#mode').value=S.mode;$('#mode').onchange=e=>{S.mode=e.target.value;store.set('mode',S.mode)};
+$('#chvol').value=S.chvol;$('#chvolV').textContent=S.chvol+'%';$('#chvol').oninput=e=>{S.chvol=+e.target.value;$('#chvolV').textContent=S.chvol+'%';store.set('chvol2',S.chvol)};
 $('#tempo').oninput=e=>{setTempo(e.target.value);if(S.songs[cur])S.songs[cur].tempo=S.tempo};
 $('#laju').oninput=e=>{S.laju=+e.target.value;$('#lajuV').textContent=S.laju+'%';store.set('laju',S.laju)};
 $('#inst').onchange=e=>{S.inst=e.target.value;store.set('inst',S.inst)};
 $('#oct').onchange=e=>{S.oct=+e.target.value;store.set('oct',S.oct)};
-$('#vol').oninput=e=>{S.vol=+e.target.value;store.set('vol',S.vol);if(master)master.gain.value=(S.vol/100)**1.5};
+$('#vol').oninput=e=>{S.vol=+e.target.value;store.set('vol',S.vol);vol()};
 ['metro','cin','drone','loop'].forEach(k=>{const el=$('#'+k);el.checked=S[k];el.onchange=()=>{S[k]=el.checked;if(k!=='loop')store.set(k,S[k])}});
 $('#laju').value=S.laju;$('#lajuV').textContent=S.laju+'%';$('#inst').value=S.inst;$('#oct').value=S.oct;$('#vol').value=S.vol;
 document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/INPUT|TEXTAREA|SELECT|BUTTON/.test(e.target.tagName)){e.preventDefault();$('#play').click()}});
@@ -647,6 +868,9 @@ function alertBox(msg){$('#warns').innerHTML=`<div class="warn">${esc(msg)}</div
 
 
 
+const fill=r=>r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%');
+document.querySelectorAll('input[type=range]').forEach(r=>{fill(r);r.addEventListener('input',()=>fill(r))});
+const _setTempo=setTempo;setTempo=v=>{_setTempo(v);fill($('#tempo'))};
 /* ---------- library & routing ---------- */
 const BLN=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 function renderDates(){const today=new Date();today.setHours(0,0,0,0);
@@ -655,11 +879,23 @@ function renderDates(){const today=new Date();today.setHours(0,0,0,0);
   $('#dates').innerHTML=Object.keys(groups).map(k=>`<h3 class="mon">${BLN[+k.slice(5,7)-1]} ${k.slice(0,4)}</h3><div class="dl">${groups[k].map(e=>
     `<button class="dc ${e.id===nextId?'next':''}" data-id="${e.id}" ${e.src?'':'disabled'}>${e.id===nextId?'<em>Terdekat</em>':''}<b>${esc(e.date)}</b><span>${esc(e.label)}</span></button>`).join('')}</div>`).join('')}
 let curEntry=null;
+const SUBS={'puji-syukur':['Puji Syukur','Panduan untuk lagu-lagu Puji Syukur sedang disiapkan: notasi 4 suara (S·A·T·B) yang bisa dinyalakan per suara, lirik per bait, dan chord.','#c8336b','♫'],
+ 'madah-bakti':['Madah Bakti','Panduan untuk lagu-lagu Madah Bakti sedang disiapkan, lengkap dengan panduan nada, lirik per bait, dan chord.','#1f7a6d','♬'],
+ 'lagu-lepas':['Lagu Lepas','Kumpulan lagu rohani di luar buku nyanyian sedang disiapkan: lagu komuni, persembahan, Natal, Paskah, dan lainnya.','#e08a1e','♩']};
 function route(){const id=location.hash.slice(1);const e=LIB.find(x=>x.id===id&&x.src);
+  const land=id===''||id==='menu',soon=!!SUBS[id];document.body.classList.toggle('landing',land);document.body.classList.toggle('soonpg',soon);
+  if(land||soon){curEntry=null;stop();document.title=soon?SUBS[id][0]+' · Organis Yang Berbahagia':'Panduan Belajar Notasi · Organis Yang Berbahagia';
+    if(soon){const[t,d,c,ic]=SUBS[id];$('#soonT').textContent=t;$('#soonD').textContent=d;$('#soonIc').textContent=ic;$('#soonIc').style.background=c}
+    if(id==='menu')setTimeout(()=>$('#menu').scrollIntoView({behavior:'smooth'}),50);else scrollTo(0,0);return}
   if(e){if(curEntry!==e){curEntry=e;load(e.src);$('#occ').textContent=e.date+' · '+e.label;document.title=e.label+' · Panduan Mazmur';scrollTo(0,0)}}
-  else{curEntry=null;stop();S.songs=[];renderTabs();render();$('#occ').textContent='';document.title='Panduan Notasi Mazmur'}}
+  else{curEntry=null;stop();S.songs=[];renderTabs();render();$('#occ').textContent='';document.title='Mazmur & Alleluya · Panduan Notasi';scrollTo(0,0)}}
 $('#dates').onclick=e=>{const b=e.target.closest('[data-id]');if(b&&!b.disabled)location.hash=b.dataset.id};
-$('#bBack').onclick=()=>{location.hash='';};
+$('#bBack').onclick=()=>{location.hash='mazmur';};
+
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();location.hash=g.dataset.go;return}
+  const h=e.target.closest('[data-home]');if(h){e.preventDefault();if(location.hash&&location.hash!=='#')history.pushState('',document.title,location.pathname+location.search);route()}});
+$('#toMenu').onclick=()=>$('#menu').scrollIntoView({behavior:'smooth'});
+{const n=LIB.filter(e=>e.src).length;$('#tag-mazmur').textContent=n+' tanggal · Tahun B'}
 addEventListener('hashchange',route);
 renderDates();route();
 }
