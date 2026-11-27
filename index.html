@@ -210,6 +210,7 @@ body.landing,body.soonpg{padding-bottom:0;background:var(--cream)}
 .soonbox p{font-size:18px;color:light-dark(#4a3f52,#cfc3d8);margin:0 auto 26px;max-width:32em}
 .crumb{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:#e7dcf2;font:600 15px "DM Sans",sans-serif;padding:6px 0;margin-bottom:8px;cursor:pointer}
 .crumb:hover{color:#fff}
+.lnav{background:var(--vio);border-bottom:0;backdrop-filter:none;transition:box-shadow .25s,background .25s}.lnav .lb{color:#fff}.lnav .pill.ghost{color:#fff;border-color:rgba(255,255,255,.55)}.lnav .pill.ghost:hover{background:rgba(255,255,255,.12)}.lnav.scrolled{background:color-mix(in srgb,var(--vio) 72%,transparent);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 8px 24px rgba(40,18,64,.28)}
 @media(max-width:520px){.lnav .lb{font-size:14px}.lnav .lb img{width:36px;height:36px}.lnav .pill{padding:8px 14px!important;font-size:14px}}
 @media(max-width:820px){.feats{order:2}.lhero .in{grid-template-columns:minmax(0,1fr)}.art{max-width:420px;order:-1;aspect-ratio:auto}.orb{position:relative;left:auto;top:auto;width:62%;margin:0 auto 18px}.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.chip{position:static;animation:none;white-space:normal;line-height:1.25}.mgrid{grid-template-columns:minmax(0,1fr)}.chip{font-size:13px;padding:8px 11px}}
 @media(prefers-reduced-motion:reduce){.art svg.keys,.chip,.marq div{animation:none}}
@@ -890,6 +891,7 @@ function route(){const id=location.hash.slice(1);const e=LIB.find(x=>x.id===id&&
   if(e){if(curEntry!==e){curEntry=e;load(e.src);$('#occ').textContent=e.date+' · '+e.label;document.title=e.label+' · Panduan Mazmur';scrollTo(0,0)}}
   else{curEntry=null;stop();S.songs=[];renderTabs();render();$('#occ').textContent='';document.title='Mazmur & Alleluya · Panduan Notasi';scrollTo(0,0)}}
 $('#dates').onclick=e=>{const b=e.target.closest('[data-id]');if(b&&!b.disabled)location.hash=b.dataset.id};
+addEventListener('scroll',()=>{const y=scrollY>8;document.querySelectorAll('.lnav').forEach(n=>n.classList.toggle('scrolled',y))},{passive:true});
 $('#bBack').onclick=()=>{location.hash='mazmur';};
 
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();location.hash=g.dataset.go;return}
